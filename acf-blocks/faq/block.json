@@ -1,0 +1,16 @@
+{
+  "name": "acf/faq",
+  "title": "FAQ",
+  "description": "FAQ Block",
+  "category": "",
+  "icon": "format-chat",
+  "keywords": [""],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "faq.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

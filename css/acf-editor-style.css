@@ -1,0 +1,14 @@
+.acf-field.horizontal-separation {
+  visibility: hidden;
+  height: 10px;
+}
+
+/* regardless the .device--dektop or .device--mobile, module need to be always appearing in Editor(backend) */
+.module {
+  display: block !important;
+}
+
+.block-editor-block-list__block {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

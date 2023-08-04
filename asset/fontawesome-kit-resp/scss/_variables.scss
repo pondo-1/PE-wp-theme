@@ -1,0 +1,112 @@
+// variables
+// --------------------------
+
+$fa-css-prefix          : fa !default;
+$fa-style               : 900 !default;
+$fa-style-family        : "" !default;
+
+$fa-display             : inline-block !default;
+
+$fa-fw-width            : fa-divide(20em, 16) !default;
+$fa-inverse             : #fff !default;
+
+$fa-border-color        : #eee !default;
+$fa-border-padding      : .2em .25em .15em !default;
+$fa-border-radius       : .1em !default;
+$fa-border-style        : solid !default;
+$fa-border-width        : .08em !default;
+
+$fa-size-scale-2xs      : 10 !default;
+$fa-size-scale-xs       : 12 !default;
+$fa-size-scale-sm       : 14 !default;
+$fa-size-scale-base     : 16 !default;
+$fa-size-scale-lg       : 20 !default;
+$fa-size-scale-xl       : 24 !default;
+$fa-size-scale-2xl      : 32 !default;
+
+$fa-sizes: (
+  "2xs"                 : $fa-size-scale-2xs,
+  "xs"                  : $fa-size-scale-xs,
+  "sm"                  : $fa-size-scale-sm,
+  "lg"                  : $fa-size-scale-lg,
+  "xl"                  : $fa-size-scale-xl,
+  "2xl"                 : $fa-size-scale-2xl
+) !default;
+
+$fa-li-width            : 2em !default;
+$fa-li-margin           : $fa-li-width * fa-divide(5, 4) !default;
+
+$fa-pull-margin         : .3em !default;
+
+$fa-primary-opacity     : 1 !default;
+$fa-secondary-opacity   : .4 !default;
+
+$fa-stack-vertical-align: middle !default;
+$fa-stack-width         : ($fa-fw-width * 2) !default;
+$fa-stack-z-index       : auto !default;
+
+$fa-font-display        : block !default;
+$fa-font-path           : "../webfonts" !default;
+
+$fa-var-arrow-left: \f060;
+$fa-var-arrow-right: \f061;
+$fa-var-chevron-down: \f078;
+$fa-var-chevron-left: \f053;
+$fa-var-chevron-right: \f054;
+$fa-var-chevron-up: \f077;
+$fa-var-circle-check: \f058;
+$fa-var-check-circle: \f058;
+$fa-var-circle-info: \f05a;
+$fa-var-info-circle: \f05a;
+$fa-var-facebook: \f09a;
+$fa-var-filter: \f0b0;
+$fa-var-instagram: \f16d;
+$fa-var-linkedin: \f08c;
+$fa-var-twitter: \f099;
+$fa-var-xmark: \f00d;
+$fa-var-close: \f00d;
+$fa-var-multiply: \f00d;
+$fa-var-remove: \f00d;
+$fa-var-times: \f00d;
+$fa-var-youtube: \f167;
+
+$fa-var-facebook: \f09a;
+$fa-var-instagram: \f16d;
+$fa-var-linkedin: \f08c;
+$fa-var-twitter: \f099;
+$fa-var-youtube: \f167;
+
+$fa-icons: (
+  "arrow-left": $fa-var-arrow-left,
+  "arrow-right": $fa-var-arrow-right,
+  "chevron-down": $fa-var-chevron-down,
+  "chevron-left": $fa-var-chevron-left,
+  "chevron-right": $fa-var-chevron-right,
+  "chevron-up": $fa-var-chevron-up,
+  "circle-check": $fa-var-circle-check,
+  "check-circle": $fa-var-check-circle,
+  "circle-info": $fa-var-circle-info,
+  "info-circle": $fa-var-info-circle,
+  "facebook": $fa-var-facebook,
+  "filter": $fa-var-filter,
+  "instagram": $fa-var-instagram,
+  "linkedin": $fa-var-linkedin,
+  "twitter": $fa-var-twitter,
+  "xmark": $fa-var-xmark,
+  "close": $fa-var-close,
+  "multiply": $fa-var-multiply,
+  "remove": $fa-var-remove,
+  "times": $fa-var-times,
+  "youtube": $fa-var-youtube,
+);
+
+$fa-brand-icons: (
+  "facebook": $fa-var-facebook,
+  "instagram": $fa-var-instagram,
+  "linkedin": $fa-var-linkedin,
+  "twitter": $fa-var-twitter,
+  "youtube": $fa-var-youtube,
+);
+
+$fa-custom-icons: (
+);

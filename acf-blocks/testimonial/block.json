@@ -1,0 +1,16 @@
+{
+  "name": "acf/testimonial",
+  "title": "Zitat",
+  "description": "Zitat mit Foto",
+  "category": "text",
+  "icon": "format-quote",
+  "keywords": ["text", "media"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "testimonial.php"
+  },
+  "supports": {
+    "align": false,
+    "customClassName": false
+  }
+}

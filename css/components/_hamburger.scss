@@ -1,0 +1,73 @@
+$hambuger-width: 30px;
+
+.hamburger {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    display: block;
+    height: $hambuger-width;
+    aspect-ratio: 1 / 1;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  //ICON
+  &__icon {
+    position: relative;
+    display: block;
+    top: 50%;
+
+    &,
+    &::before,
+    &::after {
+      width: $hambuger-width;
+      height: 3px;
+      background-color: black;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in-out;
+      border-radius: 20px;
+    }
+
+    & {
+      transition-duration: 0.1s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.8s;
+    }
+
+    &::before {
+      top: calc(-1 * $hambuger-width * 0.3);
+    }
+    &::after {
+      top: calc($hambuger-width * 0.3);
+    }
+  }
+
+  // &__button:hover &__icon::before {
+  //   top: calc(-1 * $hambuger-width * 0.4);
+  // }
+
+  // &__button:hover &__icon::after {
+  //   top: calc($hambuger-width * 0.4);
+  // }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}

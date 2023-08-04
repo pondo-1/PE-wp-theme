@@ -1,0 +1,234 @@
+@mixin chevron-down-icon {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  aspect-ratio: 1;
+  background-image: url("/asset/icons/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-left: 0.5rem;
+  transform: translateY(3px);
+}
+
+@mixin underline {
+  content: "";
+  position: absolute;
+  bottom: -0.5em;
+  left: 0;
+  width: 100%;
+  background: $color-blue-dark;
+  height: 4px;
+  border-radius: 10px;
+}
+
+.header {
+  // Structure
+  width: 100%;
+  max-width: $body-max-width;
+  padding: 0 2.5rem;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  justify-content: space-between;
+
+  &--outer {
+    height: $header-height;
+    position: relative;
+  }
+  &--container {
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  .logo {
+    width: fit-content;
+    margin-right: 5vw;
+    img {
+      max-height: 50px;
+    }
+  }
+  // hamburger button
+  .hamburger__button {
+    display: none;
+  }
+
+  // desktop Navi
+  .header--container:not(.mobile-navi-open) .nav {
+    a:hover {
+      color: $color-blue-dark;
+    }
+    // Apply only Top Layer: Produkte Hilfe Unternehmen
+    .main-menu > li {
+      &:not(:last-child) {
+        margin-right: 2.5rem;
+      }
+      line-height: 50px;
+      display: inline-block;
+      // for dropdown
+      position: relative;
+      // for underline
+      & > a {
+        position: relative;
+      }
+      // underline
+      & > a::before {
+        @include underline;
+        opacity: 0;
+      }
+      // icon
+      &.menu-item-has-children > a::after {
+        @include chevron-down-icon;
+        transition: all 0.5s;
+      }
+      &.active.menu-item-has-children > a::after {
+        transform: rotate(180deg);
+        transition: all 0.8s;
+      }
+      // shorter underline of there is icon
+      &.menu-item-has-children > a::before {
+        width: calc(100% - 1.5rem);
+      }
+      //show underline
+      &.current-menu-ancestor a:before,
+      &.current-menu-item a:before {
+        opacity: 1;
+      }
+      // with click(js) sub menu open
+      &.active > ul {
+        visibility: inherit;
+        z-index: 2;
+      }
+    }
+
+    // Apply only first dropdown:
+    ul.menu-depth-1 {
+      font-size: 18px;
+      /* Hide Dropdowns by Default */
+      visibility: hidden;
+      /* Dropdown box decoration */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      background-color: white;
+      // related to upper li
+      position: absolute;
+      margin-top: 1rem;
+      left: -1.5em;
+      .current-menu-item,
+      .current-menu-ancestor {
+        a {
+          position: relative;
+        }
+        a::before {
+          display: block;
+          background-color: $color-blue-dark;
+          border-radius: 20px;
+          height: 1rem;
+          width: 3px;
+          content: "";
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: -1rem;
+        }
+      }
+      /* drop down li, padding, margin, underlin */
+      li {
+        min-width: 130px;
+        padding: 0.8rem 0px;
+        margin: 0px 1.5em;
+        line-height: 1.5em;
+      }
+      a {
+        white-space: nowrap;
+      }
+    }
+    // hide 3rd level for desktop
+    ul.menu-depth-2 {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    .hamburger__button {
+      display: block;
+    }
+    .header--container {
+      display: none;
+      position: absolute;
+      max-height: calc(100vh - $header-height);
+      width: 100%;
+      left: 0px;
+      bottom: 0px;
+      transform: translateY(100%);
+      z-index: 3;
+      overflow-y: scroll;
+      background-color: white;
+    }
+    .hamburger__checkbox:checked ~ .header--container {
+      display: block;
+      padding-bottom: 2.5em;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    // .hamburger__checkbox:checked ~ .header--container == .header--container.mobile-navi-open
+    .header--container.mobile-navi-open .nav {
+      font-size: 18px;
+      font-weight: 400;
+      padding: 0 2.5rem;
+      ul.main-menu {
+        flex-direction: column;
+        display: flex;
+      }
+      li.menu-item-depth-0 {
+        margin-bottom: 3rem;
+        & > a {
+          font-weight: 700;
+        }
+      }
+      ul.menu-depth-1 {
+        margin-left: 1rem;
+        li {
+          margin-top: 1rem;
+        }
+        li.menu-item-has-children {
+          //icon
+          & > a {
+            position: relative;
+            &::before {
+              @include chevron-down-icon;
+              transform: rotate(-90deg) translate(-5px, -1.5rem);
+              position: absolute;
+              left: 0px;
+            }
+          }
+          &.active > ul {
+            display: block;
+          }
+        }
+      }
+
+      ul.menu-depth-2 {
+        display: none;
+        li {
+          margin-bottom: 2rem;
+        }
+        li.current-menu-item {
+          & > a {
+            position: relative;
+            &:before {
+              @include underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $bp-last) {
+    padding: 0 1rem;
+    .logo {
+      margin-right: 10vw;
+    }
+  }
+}

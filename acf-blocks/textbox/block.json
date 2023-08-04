@@ -1,0 +1,16 @@
+{
+  "name": "acf/textbox",
+  "title": "Textbox",
+  "description": "Formatted Text Block",
+  "category": "",
+  "icon": "text",
+  "keywords": [""],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "textbox.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

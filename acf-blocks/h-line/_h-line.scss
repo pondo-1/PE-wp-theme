@@ -1,0 +1,30 @@
+.h-line {
+  //Structure
+  .container {
+    @include grid12;
+  }
+
+  // line color
+  $line-color: (
+    "blue-middle": $c-blue-middle,
+    "blue-dark": $c-blue-dark,
+    "green-middle": $c-green-middle,
+    "orange-middle": $c-orange-middle,
+    "red-middle": $c-red-middle,
+    "gray-middle": $c-gray-middle,
+  );
+
+  @each $c-name, $color in $line-color {
+    .line {
+      &.#{$c-name} {
+        background-color: $color;
+      }
+    }
+  }
+
+  .line {
+    grid-column: col-start 2 / col-end 11;
+    height: 4px;
+    border-radius: 8px;
+  }
+}

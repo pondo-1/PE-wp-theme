@@ -1,0 +1,16 @@
+{
+  "name": "acf/subnavigation",
+  "title": "Sub Navigation",
+  "description": "Sub Navigation",
+  "category": "widgets",
+  "icon": "editor-insertmore",
+  "keywords": ["navi"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "subnavigation.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

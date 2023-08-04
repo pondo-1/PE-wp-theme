@@ -1,0 +1,63 @@
+.subnavigation {
+  //Structure  & Default color
+  .container {
+    nav {
+      display: flex;
+      border-radius: 8px;
+      background: $color-blue-light-light;
+      line-height: 2.5em;
+      font-size: 20px;
+    }
+
+    a {
+      margin: 2px 2px;
+      text-align: center;
+      flex: 1;
+      position: relative;
+      font-weight: 700;
+
+      // underline
+      &::after {
+        content: "";
+        height: 4px;
+        width: 100px;
+        position: absolute;
+        background-color: $color-blue-dark;
+        visibility: hidden;
+        transform: translate(-50%, 50%);
+        left: 50%;
+        bottom: 0;
+      }
+      &.active::after {
+        visibility: visible;
+      }
+      &:hover {
+        color: $color-blue-dark;
+      }
+    }
+  }
+  //Sticky
+
+  &.sticky {
+    position: fixed;
+    z-index: $h-z-index-default;
+    top: 0;
+    width: 100%;
+    background-color: $c-bg-white;
+    box-shadow: 0 0 0.3rem 2.5rem $c-bg-white;
+    .container {
+      background-color: $color-blue-light-light;
+    }
+    nav {
+      max-width: 1140px;
+      margin: auto;
+    }
+  }
+}
+.subnavi-placeholder {
+  height: 56px;
+  display: none;
+}
+.subnavigation.sticky + .subnavi-placeholder {
+  display: block;
+}

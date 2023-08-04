@@ -1,0 +1,15 @@
+.border {
+  border-style: solid;
+  border-width: 2px;
+  &.b {
+    &--red {
+      border-color: red;
+    }
+    &--yellow {
+      border-color: yellow;
+    }
+    &--blue {
+      border-color: blueviolet;
+    }
+  }
+}

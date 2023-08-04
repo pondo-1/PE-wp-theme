@@ -1,0 +1,16 @@
+{
+  "name": "acf/teaser",
+  "title": "Teaser",
+  "description": "Teaser Block",
+  "category": "",
+  "icon": "button",
+  "keywords": [""],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "teaser.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

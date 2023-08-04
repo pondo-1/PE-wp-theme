@@ -1,0 +1,79 @@
+.cards {
+  // Structure & Spaces(paading margin)
+  .container {
+    display: flex;
+    column-gap: 24px;
+  }
+  .card {
+    width: 100%;
+    scroll-snap-align: start;
+    display: flex;
+  }
+  .card--inner {
+    margin: 10%;
+    width: 100%;
+    @include flex(column, 24px);
+  }
+  .card__image {
+    img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: contain;
+      aspect-ratio: 1/1;
+    }
+  }
+  .card__text-content {
+    .heading {
+      text-align: center;
+      margin-bottom: 0.5em;
+      font-size: 39.063px;
+    }
+    .buttons {
+      margin-top: 1.5em;
+      *:first-child {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  // Option: image-first / text-first
+  &.image-first {
+    .card__image {
+      order: 1;
+    }
+    .card__text-content {
+      order: 2;
+    }
+  }
+  &.text-first {
+    .card__image {
+      order: 2;
+    }
+    .card__text-content {
+      order: 1;
+    }
+  }
+
+  // Optio: Graphic Type: Image(default) / Icon
+  &.graphic-icon {
+    .card__image {
+      padding: 20%;
+    }
+  }
+
+  @media only screen and (max-width: 940px) {
+    .container {
+      overflow-x: scroll;
+      @include hide-scrollbar;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .card {
+      min-width: 300px;
+      &:last-child {
+        margin-right: 80vw;
+      }
+    }
+  }
+}
