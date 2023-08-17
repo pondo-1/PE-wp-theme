@@ -15,18 +15,18 @@ require_once(FUNCTIONSPATH . 'acfblock.php');
 require_once(THEMEPATH . '/template-parts/navigation/nav-functions.php');
 require_once(THEMEPATH . '/template-parts/archive-helper.php');
 // Add funktions to build modules
-require_once(THEMEPATH . '/acf-blocks/subnavigation/functions.php');
+// require_once(THEMEPATH . '/acf-blocks/subnavigation/functions.php');
 
 
 
 // Theme Feature
 //-- Blog: default editor ignored -> acf would be used 
-add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
-function prefix_disable_gutenberg($current_status, $post_type)
-{
-  if ('post' === $post_type) return false;
-  return $current_status;
-}
+// add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
+// function prefix_disable_gutenberg($current_status, $post_type)
+// {
+//   if ('post' === $post_type) return false;
+//   return $current_status;
+// }
 
 
 /**
@@ -38,9 +38,9 @@ function allowedBlockTypes($original_allowedBlocks, $post)
 {
   global $allowedBlocks;
 
-  if ($post->post_type === 'theme_reference') {
-    array_push($allowedBlocks, "core/spacer", "core/paragraph", "core/heading", "core/columns");
-  }
+  // if ($post->post_type === 'theme_reference') {
+  //   array_push($allowedBlocks, "core/spacer", "core/paragraph", "core/heading", "core/columns");
+  // }
   return $allowedBlocks;
 }
 

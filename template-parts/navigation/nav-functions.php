@@ -27,7 +27,10 @@ function getMenu($menu_name = 'primary', $depth = 0, $nav_class = '', $container
     );
     return wp_nav_menu($nav_arg);
   } else {
-    return "check your menu";
+    $locations = get_nav_menu_locations();
+    $message = "<p>menu-" . $menu_name . "</p>";
+    echo $message;
+    return  "problem";
   }
 }
 

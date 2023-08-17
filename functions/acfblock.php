@@ -23,16 +23,4 @@ class ACFBlock
   }
 }
 new ACFblock("textbox");
-new ACFblock("teaser");
 new ACFblock("imagetext");
-new ACFblock("cards");
-new ACFblock("subnavigation");
-new ACFblock("h-line");
-new ACFblock("testimonial");
-new ACFblock("price-table");
-new ACFblock("booking");
-new ACFblock("faq");
-new ACFBlock("logos");
-new ACFBlock("contact");
-
-new ACFBlock("color-test");
