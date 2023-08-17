@@ -1,8 +1,14 @@
 /*
- Theme Name: THEME Blueprint
- Author: PAGE EFFECT
- Version: 0.1
+ Theme Name: Page Effect Theme
+ Author: Diane @ Page Effect 
+ Version: 0.2
 
  Description: 
- Plugin ACF Pro required
+
+
+ <!-- $size = 'full'; // (thumbnail, medium, large, full or custom size) -->
+       <img class="header__logo" srcset="
+              /asset/img/Pageeffect_logo.svg 480w,
+              /asset/img/Pageeffect_logo.svg 800w
+            " src="/asset/img/Pageeffect_logo.svg" sizes="100px" alt="Logo" />
  */

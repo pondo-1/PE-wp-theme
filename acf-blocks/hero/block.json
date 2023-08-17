@@ -1,0 +1,16 @@
+{
+  "name": "acf/hero",
+  "title": "Hero",
+  "description": "Hero Section",
+  "category": "",
+  "icon": "cover-image",
+  "keywords": ["text", "image"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "renderTemplate.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

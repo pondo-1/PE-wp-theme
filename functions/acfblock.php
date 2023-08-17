@@ -24,3 +24,6 @@ class ACFBlock
 }
 new ACFblock("textbox");
 new ACFblock("imagetext");
+
+new ACFblock("hero");
+new ACFblock("image-text");

@@ -1,0 +1,103 @@
+@mixin flex($dir, $gap: unset) {
+  display: flex;
+  flex-direction: $dir;
+  @if $dir == column {
+    row-gap: $gap;
+  } @else if $dir == row {
+    column-gap: $gap;
+  }
+}
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin gradient-border-btn($bg-color: inherit) {
+  position: relative;
+  box-sizing: border-box;
+
+  $border: 2px;
+  background-color: $bg-color;
+  background-clip: padding-box; /* !importanté */
+  border: solid $border transparent; /* !importanté */
+  border-radius: $border-radius;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(200deg, #e05976, #9a60c2);
+  }
+}
+
+@mixin gradient-border-feature($bg-color: inherit, $current-z-index: 1) {
+  $border: 3px;
+
+  position: relative;
+
+  & > * {
+    position: relative;
+    z-index: $current-z-index + 4;
+  }
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $border-radius;
+  }
+  &::before {
+    background: linear-gradient(200deg, #e05976, #9a60c2);
+    z-index: $current-z-index + 1;
+  }
+  &::after {
+    z-index: $current-z-index + 2;
+    background-color: $bg-color;
+    background-clip: padding-box; /* !importanté */
+    border: solid $border transparent; /* !importanté */
+    box-sizing: border-box;
+  }
+}
+
+@mixin gradient-border-shadow($bg-color: inherit, $current-z-index: 1) {
+  @include gradient-border-feature($bg-color, $current-z-index);
+  &::after,
+  &::before {
+    top: 15%;
+    left: 15%;
+  }
+}
+
+.gradient-border-shadow {
+  @include gradient-border-shadow($c-bg-basic);
+}
+
+@mixin gradient-text {
+  /* Fallback: Set a background color. */
+  background-color: $c-f-red;
+
+  /* Create the gradient. */
+  background-image: $gradient-default;
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}

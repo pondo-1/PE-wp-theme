@@ -1,0 +1,10 @@
+<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 3 Copy 2">
+<mask id="mask0_0_442" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="45" height="45">
+<path id="Clip 2" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H45V45H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_0_442)">
+<path id="Fill 1" fill-rule="evenodd" clip-rule="evenodd" d="M22.5 27.6445L17.3556 22.5L22.5 17.3556L27.6445 22.5L22.5 27.6445ZM44.1098 20.342L24.658 0.890222C23.4711 -0.296741 21.529 -0.296741 20.342 0.890222L0.890222 20.342C-0.296741 21.529 -0.296741 23.4711 0.890222 24.658L20.342 44.1098C21.529 45.2968 23.4711 45.2968 24.658 44.1098L44.1098 24.658C45.2968 23.4711 45.2968 21.529 44.1098 20.342V20.342Z" fill="white"/>
+</g>
+</g>
+</svg>

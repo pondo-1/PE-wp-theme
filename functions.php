@@ -7,15 +7,15 @@ define('FUNCTIONSPATH', THEMEPATH . '/functions/');
 
 // initial settings : add css, Lato font localize, custom post type: theme reference, fontawsome
 require_once(FUNCTIONSPATH . 'init.php');
-// acf block helper functions
-// require_once(FUNCTIONSPATH . 'acfblock-helper.php');
 // initial settings : acf block register 
 require_once(FUNCTIONSPATH . 'acfblock.php');
+// acf block helper functions, Add funktions to build modules
+require_once(THEMEPATH . '/acf-blocks/acfblock-helper.php');
+
 // Add funktions to build templates
 require_once(THEMEPATH . '/template-parts/navigation/nav-functions.php');
 require_once(THEMEPATH . '/template-parts/archive-helper.php');
-// Add funktions to build modules
-// require_once(THEMEPATH . '/acf-blocks/subnavigation/functions.php');
+
 
 
 

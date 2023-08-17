@@ -1,0 +1,85 @@
+$font-system: (
+  family: (
+    B: "Barlow",
+    B-C: "Barlow Condensed",
+    B-SC: "Barlow Semi Condensed",
+  ),
+  weight: (
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    inherit: inherit,
+  ),
+);
+$ff-barlow: "Barlow";
+$ff-barlow-condensed: "Barlow Condensed";
+$ff-barlow-semi-condensed: "Barlow Semi Condensed";
+// font-size -- desktop -big/-normal/-small
+$fs-d-big: 48px;
+$fs-d-normal: 21px;
+$fs-d-base: 18px;
+$fs-s-big: 30px;
+$fs-s-normal: 17px;
+$fs-s-base: 14px;
+
+// regular font size
+$regular-font: (
+  desktop: (
+    base: 18px,
+    normal: 21px,
+    big: 48px,
+  ),
+  small-screen: (
+    base: 14px,
+    normal: 17px,
+    big: 30px,
+  ),
+);
+
+@mixin regular-fs($size: normal) {
+  @media screen and (max-width: $bp-smallfont) {
+    font-size: map-get(map-get($regular-font, small-screen), $size);
+    letter-spacing: -0.28px;
+  }
+  font-size: map-get(map-get($regular-font, desktop), $size);
+  letter-spacing: -0.35px;
+}
+
+html {
+  // This defines what 1rem is
+  @include regular-fs(base);
+}
+
+body {
+  font-family: $ff-barlow;
+  line-height: 1.5;
+  font-weight: 300;
+  @include regular-fs(normal);
+}
+
+.module {
+  &__heading {
+    line-height: 1.2;
+    font-family: $ff-barlow-semi-condensed;
+    @include regular-fs(big);
+    font-weight: 300;
+    margin-bottom: $row-gap;
+  }
+  strong {
+    font-weight: 600;
+  }
+}
+
+.custom-svg-icon-wp {
+  background-image: url("/asset/icons/wp.svg");
+  height: 45px;
+  width: 45px;
+}
+.custom-svg-icon-leaflet {
+  background-image: url("/asset/icons/leaflet.svg");
+  height: 45px;
+  width: 45px;
+  background-size: cover;
+}

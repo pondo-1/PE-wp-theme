@@ -4,8 +4,6 @@
  * Defult template
  *
  */
-?>
-
-<?php get_header(); ?>
-<?php the_content(); ?>
-<?php get_footer(); ?>
+get_header();
+the_content();
+get_footer();

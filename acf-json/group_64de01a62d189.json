@@ -1,0 +1,104 @@
+{
+    "key": "group_64de01a62d189",
+    "title": "module: Hero",
+    "fields": [
+        {
+            "key": "field_64de208694182",
+            "label": "Block name",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h4>Hero<\/h4>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_64de01a6c2b79",
+            "label": "Textbox",
+            "name": "textbox-editor",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Please use module__heading for title class.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<h1 class=\"module__heading\">\r\n  Hi, PAGE EFFECT baut Webseiten und Online Shops mit klarer Linie:\r\n  <span class=\"strong\">SEO - Besucheranalyse Zielgruppenfokus<\/span>\r\n<\/h1>\r\n<p>\r\n  Lorem ipsum dolor sit amet, consetetur sadipscing dolorem sitear\r\n  elitr, sed diam nonumy! Lorem ipsum dolor sit amet, consetetur\r\n  sadipscing elitr.\r\n<\/p>",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_64de0312678b9",
+            "label": "Hero Image",
+            "name": "hero-image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "max-width 380px, min-width 230px, default image 380×408.15",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_64de029fc2b7a",
+            "label": "CTA",
+            "name": "cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/hero"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1692280302
+}

@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  box-sizing: border-box;
+  background-color: $c-bg-basic;
+  color: $c-f-black;
+}
+a {
+  color: inherit;
+}
+//dev perpose
+section.module {
+  border: solid 1px red;
+  .container {
+    border: solid 1px green;
+  }
+}
+
+.module {
+  margin: 10px auto;
+  position: relative;
+  z-index: $m-z-index-default;
+  max-width: 1600px;
+  overflow: hidden;
+  &__heading {
+    margin-bottom: $row-gap;
+  }
+}
+
+.container {
+  max-width: 1140px;
+  margin: 40px auto;
+  @media screen and (max-width: 1250px) {
+    padding: 0 5%;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.bg-black {
+  background-color: $c-bg-black;
+  .btn--empty {
+    background-color: $c-bg-black;
+  }
+}
+
+.text-box {
+  p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}

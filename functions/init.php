@@ -31,7 +31,7 @@ function showAdminMessages()
 function pe_theme_files()
 {
   //front end
-  wp_enqueue_style('pe_theme_main_styles', get_theme_file_uri('/build/style-index.css'));
+  wp_enqueue_style('pe_theme_main_styles', get_theme_file_uri('/build/index.css'));
   // Javascript need to be loaded in footer: last variable need to be true
   wp_enqueue_script('pe_theme_js', get_template_directory_uri() . '/build/index.js', array(), '', true);
 }
@@ -58,12 +58,12 @@ function pe_theme_features()
   */
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
-  // add_image_size('professorLandscape', 400, 260, true);
+  // add_image_size('professorLandscape', 400, 260, true); -> check image sizes 
 
   // Editor style. add custom acf-aditor css and front end style https://www.billerickson.net/getting-your-theme-ready-for-gutenberg/
   add_theme_support('editor-styles');
   add_editor_style(get_template_directory_uri() . '/css/acf-editor-style.css');
-  add_editor_style(get_theme_file_uri('/build/style-index.css'));
+  add_editor_style(get_theme_file_uri('/build/index.css'));
 }
 add_action('after_setup_theme', 'pe_theme_features');
 
@@ -90,8 +90,6 @@ class local_fonts
 new local_fonts();
 
 
-
-
 function registerTypeThemeRef()
 {
   register_post_type(
@@ -110,3 +108,77 @@ function registerTypeThemeRef()
 }
 
 add_action('init', 'registerTypeThemeRef');
+
+
+// Image sizes 
+// how to check 
+
+// function _get_all_image_sizes()
+// {
+//   global $_wp_additional_image_sizes;
+
+//   $default_image_sizes = get_intermediate_image_sizes();
+
+//   foreach ($default_image_sizes as $size) {
+//     $image_sizes[$size]['width'] = intval(get_option("{$size}_size_w"));
+//     $image_sizes[$size]['height'] = intval(get_option("{$size}_size_h"));
+//     $image_sizes[$size]['crop'] = get_option("{$size}_crop") ? get_option("{$size}_crop") : false;
+//   }
+
+//   if (isset($_wp_additional_image_sizes) && count($_wp_additional_image_sizes)) {
+//     $image_sizes = array_merge($image_sizes, $_wp_additional_image_sizes);
+//   }
+
+//   return $image_sizes;
+// }
+// print_r(_get_all_image_sizes());
+// 
+// Array ( 
+//   [thumbnail] => Array ( 
+//     [width] => 150 
+//     [height] => 150 
+//     [crop] => 1 
+//   ) 
+//   [medium] => Array ( 
+//     [width] => 300 
+//     [height] => 300 
+//     [crop] => 
+//   ) 
+//   [medium_large] => Array ( 
+//     [width] => 768 
+//     [height] => 0 
+//     [crop] => 
+//   ) 
+//   [large] => Array ( 
+//     [width] => 1024 
+//     [height] => 1024 
+//     [crop] => 
+//   ) 
+//   [1536×1536] => Array ( 
+//     [width] => 1536 
+//     [height] => 1536 
+//     [crop] => 
+//     ) 
+//   [2048×2048] => Array ( 
+//     [width] => 2048 
+//     [height] => 2048 
+//     [crop] => 
+//   ) 
+// ) 
+
+/*
+ * WordPress: Remove unwonted image sizes.
+ * In this code I remove the three sizes medium_large, 1536x1536, 2048x2048
+ * See full article: 
+ */
+
+add_filter('intermediate_image_sizes', function ($sizes) {
+  return array_diff($sizes, ['medium_large']);  // Medium Large (768 x 0)
+});
+
+add_action('init', 'j0e_remove_large_image_sizes');
+function j0e_remove_large_image_sizes()
+{
+  remove_image_size('1536x1536');             // 2 x Medium Large (1536 x 1536)
+  remove_image_size('2048x2048');             // 2 x Large (2048 x 2048)
+}

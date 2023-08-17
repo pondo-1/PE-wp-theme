@@ -1,4 +1,4 @@
-import "../css/style.scss";
+import "../scss/index.scss";
 
 import Navigation from "../template-parts/navigation/navigation";
 import Scrollup from "../template-parts/blog/scrollup";

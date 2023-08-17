@@ -1,0 +1,76 @@
+.blocks {
+  @include regular-fs(base);
+  font-weight: 500;
+  .module__heading {
+    text-align: center;
+  }
+  ul {
+    width: 110%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -5%;
+    text-align: center;
+    overflow: hidden;
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 5);
+    height: 60px;
+    padding: 10px 35px;
+    line-height: 1.33;
+    position: relative;
+    margin-bottom: 2.5em;
+
+    &:not(:last-child)::after {
+      content: "";
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      right: -2px;
+      background: $gradient-default;
+      @media screen and (max-width: $bp-smallfont) {
+        width: 1px;
+      }
+    }
+    img {
+      object-fit: contain;
+      height: 100%;
+    }
+  }
+  @media screen and (max-width: $bp-largest) {
+    li {
+      width: 25%;
+    }
+  }
+  @media screen and (max-width: $bp-tablet) {
+    li {
+      width: 33.33%;
+    }
+  }
+
+  &.long-block {
+    li {
+      @include flex(column, 1rem);
+      width: 25%;
+      height: auto;
+      .number {
+        font-size: 3.5rem;
+        font-weight: 200;
+        @include gradient-text;
+      }
+      .text {
+        font-weight: 600;
+        @include regular-fs(normal);
+      }
+    }
+    @media screen and (max-width: $bp-smallfont) {
+      li {
+        width: 50%;
+        min-width: 160px;
+      }
+    }
+  }
+}

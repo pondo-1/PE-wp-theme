@@ -1,0 +1,34 @@
+.column-3 {
+  display: flex;
+  &-1 {
+    width: 33.33%;
+  }
+  &-2 {
+    width: 66.66%;
+    padding-left: $column-gap--big;
+  }
+}
+
+.column-2 {
+  display: flex;
+  & > * {
+    width: 50%;
+  }
+}
+
+//  background option
+.bg-black {
+  $f-color: $c-f-white;
+  $bg-color: $c-bg-black;
+
+  color: $f-color;
+  &.module {
+    background: $bg-color;
+  }
+  .gradient-border-shadow {
+    @include gradient-border-shadow($bg-color);
+  }
+  .btn-empty {
+    background-color: $bg-color;
+  }
+}
