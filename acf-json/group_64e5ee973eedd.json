@@ -1,10 +1,10 @@
 {
-    "key": "group_649ebc6d7acda",
-    "title": "Block: FAQ",
+    "key": "group_64e5ee973eedd",
+    "title": "module: Features",
     "fields": [
         {
-            "key": "field_649ebc6d8b38d",
-            "label": "Block Name:",
+            "key": "field_64e5ee9744b00",
+            "label": "Block name",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -16,17 +16,17 @@
                 "class": "",
                 "id": ""
             },
-            "message": "<h4>FAQ<\/h4>",
+            "message": "<h4>Features<\/h4>",
             "new_lines": "wpautop",
             "esc_html": 0
         },
         {
-            "key": "field_649ebcab8b38e",
-            "label": "Block: common Components - All",
-            "name": "",
+            "key": "field_64e5ee9744b38",
+            "label": "Module Heading",
+            "name": "textbox",
             "aria-label": "",
-            "type": "clone",
-            "instructions": "",
+            "type": "text",
+            "instructions": "Please use module__heading for title class.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -34,18 +34,16 @@
                 "class": "",
                 "id": ""
             },
-            "clone": [
-                "group_649c0188eb220"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "default_value": "<h2 class=\"module__heading\">   Unsere   <strong>Leistungen<\/strong> <\/h2>",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_649ebd118b390",
-            "label": "Entry",
-            "name": "Block::faq:entry",
+            "key": "field_64e5f049926fe",
+            "label": "features",
+            "name": "features",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -65,46 +63,51 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_649ebd188b391",
-                    "label": "Frage",
-                    "name": "question",
+                    "key": "field_64e5f05e926ff",
+                    "label": "Icon",
+                    "name": "icon",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "20",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "Frage",
-                    "maxlength": "",
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "",
-                    "parent_repeater": "field_649ebd118b390"
+                    "return_format": "id",
+                    "library": "all",
+                    "min_width": 45,
+                    "min_height": 45,
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_64e5f049926fe"
                 },
                 {
-                    "key": "field_649ebd3b8b392",
-                    "label": "Antwort",
-                    "name": "answer",
+                    "key": "field_64e5f0ca92700",
+                    "label": "textbox-editor",
+                    "name": "textbox-editor",
                     "aria-label": "",
                     "type": "wysiwyg",
-                    "instructions": "",
+                    "instructions": "please use class \"heading\" for feature heading.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "80",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
+                    "default_value": "<h4 class=\"heading\">Wordpress & WooCommerce Entwicklung<\/h4>\r\n<p>\r\n  Custom Themes, Custom Plugins, Debugging, Pagespeed Optimierung, REST API\r\n<\/p>",
+                    "tabs": "text",
                     "media_upload": 0,
+                    "toolbar": "full",
                     "delay": 0,
-                    "parent_repeater": "field_649ebd118b390"
+                    "parent_repeater": "field_64e5f049926fe"
                 }
             ]
         }
@@ -114,7 +117,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/faq"
+                "value": "acf\/features"
             }
         ]
     ],
@@ -127,5 +130,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1688125411
+    "modified": 1692869294
 }

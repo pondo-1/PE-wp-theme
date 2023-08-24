@@ -20,7 +20,7 @@ $font-path: "../asset/fonts";
 
 @import "../acf-blocks/hero/hero";
 @import "../acf-blocks/image-text/image-text";
-@import "modules/features";
-@import "modules/blocks";
-@import "modules/text-features";
-@import "modules/project-slider";
+@import "../acf-blocks/features/features";
+@import "../acf-blocks/blocks/blocks";
+@import "../acf-blocks/text-features/text-features";
+@import "../acf-blocks/project-slider/project-slider";

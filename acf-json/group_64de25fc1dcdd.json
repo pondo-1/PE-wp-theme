@@ -1,6 +1,6 @@
 {
     "key": "group_64de25fc1dcdd",
-    "title": "module: Hero (copy)",
+    "title": "module: Image & Text",
     "fields": [
         {
             "key": "field_64de25fc23d3d",
@@ -170,5 +170,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692282431
+    "modified": 1692874287
 }

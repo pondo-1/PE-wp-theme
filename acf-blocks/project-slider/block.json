@@ -1,0 +1,16 @@
+{
+  "name": "acf/project-slider",
+  "title": "Project Slider",
+  "description": "Show Projects with Slider",
+  "category": "",
+  "icon": "embed-photo",
+  "keywords": ["Project", "image"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "renderTemplate.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

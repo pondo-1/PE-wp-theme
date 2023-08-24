@@ -1,0 +1,16 @@
+{
+  "name": "acf/text-features",
+  "title": "Text & Features",
+  "description": "Text box on the left side and features list on the right side",
+  "category": "",
+  "icon": "align-pull-left",
+  "keywords": ["text", "features"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "renderTemplate.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

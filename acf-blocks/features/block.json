@@ -1,0 +1,16 @@
+{
+  "name": "acf/features",
+  "title": "Features",
+  "description": "Features will be represent in grid",
+  "category": "",
+  "icon": "screenoptions",
+  "keywords": ["text", "icons"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "renderTemplate.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

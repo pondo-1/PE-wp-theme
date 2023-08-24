@@ -8,87 +8,9 @@
 // the_content();
 // get_footer();
 ?>
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
-
-<!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
-
-<!--<link rel="stylesheet" href="css/icon-font.css">-->
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js"></script> -->
-<!-- <link rel="stylesheet" href="css/style.css" /> -->
-
-<!-- <title>Page Effect</title>
-</head>
-
-<body> -->
-
 <?php get_header(); ?>
 <main>
-  <section class="module features bg-black">
-    <div class="container">
-      <h3 class="module__heading">
-        Unsere<br /><span class="strong">Leistungen</span>
-      </h3>
-      <div class="module__content">
-        <div class="feature">
-          <div class="feature__icon">
-            <img srcset="
-                    /asset/icons/leaflet.svg 480w,
-                    /asset/icons/leaflet.svg 800w
-                  " sizes="45px" src="/asset/ions/leaflet.svg" alt="Elva dressed as a fairy" />
-          </div>
-          <div class="feature__content text-box text-box">
-            <h4 class="heading">Wordpress & WooCommerce Entwicklung</h4>
-            <p class="text">
-              ins, Debugging, Pagespeed Optimierung, REST API
-            </p>
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature__icon">
-            <img srcset="/asset/icons/wp.svg 480w, /asset/icons/wp.svg 800w" sizes="45px" src="/asset/ions/wp.svg" alt="Elva dressed as a fairy" />
-          </div>
-          <div class="feature__content text-box">
-            <h4 class="heading">Wordpress & WooCommerce Entwicklung</h4>
-            <p class="text">
-              ins, Debugging, Pagespeed Optimierung, REST API
-            </p>
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature__icon">
-            <img srcset="/asset/icons/wp.svg 480w, /asset/icons/wp.svg 800w" sizes="45px" src="/asset/ions/wp.svg" alt="Elva dressed as a fairy" />
-          </div>
-          <div class="feature__content text-box">
-            <h4 class="heading">Wordpress & WooCommerce Entwicklung</h4>
-            <p class="text">
-              Custom Themes, Custom Plugins, Debugging, Pagespeed
-              Optimierung, REST APICustom Themes, Custom Plugins, Debugging,
-              Pagespeed Optimierung, REST API
-            </p>
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature__icon">
-            <img srcset="/asset/icons/wp.svg 480w, /asset/icons/wp.svg 800w" sizes="45px" src="/asset/ions/wp.svg" alt="Elva dressed as a fairy" />
-          </div>
-          <div class="feature__content text-box">
-            <h4 class="heading">Wordpress & WooCommerce Entwicklung</h4>
-            <p class="text">
-              Custom Themes, Custom Plugins, Debugging, Pagespeed
-              Optimierung, REST API
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <section class="module blocks long-block">
     <div class="container">
@@ -224,27 +146,6 @@
     </div>
   </section>
 
-  <section class="module blocks">
-    <div class="container">
-      <div class="module__heading">
-        <span class="fw-light">Wir setzen folgende
-          <span class="fw-semibold">Technologien</span> ein</span>
-      </div>
-      <div class="module__content">
-        <ul class="elements">
-          <li><span>css</span></li>
-          <li>sass</li>
-          <li>Wordpress</li>
-          <li>PHP</li>
-          <li>MySQL</li>
-          <li>Standalone Lösungen</li>
-          <li>Google Analytics</li>
-          <li>Google Tag Manager</li>
-          <li>Google Adwords</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
   <section class="module text-features">
     <div class="container column-3">

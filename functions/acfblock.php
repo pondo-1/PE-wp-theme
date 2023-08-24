@@ -27,3 +27,7 @@ new ACFblock("imagetext");
 
 new ACFblock("hero");
 new ACFblock("image-text");
+new ACFblock("features");
+new ACFblock("blocks");
+new ACFblock("text-features");
+new ACFblock("project-slider");

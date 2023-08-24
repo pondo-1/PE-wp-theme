@@ -1,5 +1,3 @@
-import Helper from "../../src/helper";
-
 /**
  *  Shows the Navigation bar, if not accepted, yet.
  */

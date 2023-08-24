@@ -1,0 +1,16 @@
+{
+  "name": "acf/blocks",
+  "title": "Blocks",
+  "description": "Short words will be represented with grid Structure",
+  "category": "",
+  "icon": "ellipsis",
+  "keywords": ["text"],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "renderTemplate.php"
+  },
+  "supports": {
+    "align": [""],
+    "customClassName": false
+  }
+}

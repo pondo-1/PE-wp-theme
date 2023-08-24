@@ -51,7 +51,7 @@
     }
   }
 
-  &.long-block {
+  .num-text {
     li {
       @include flex(column, 1rem);
       width: 25%;

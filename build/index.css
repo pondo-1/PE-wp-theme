@@ -926,8 +926,6 @@ li {
 
 .features {
   color: #fff;
-  padding-top: 130px;
-  height: 1700px;
 }
 .features .module__heading {
   text-align: center;
@@ -989,7 +987,7 @@ li {
   margin-bottom: 20px;
   font-weight: 500;
 }
-.features .feature .text {
+.features .feature p {
   font-weight: 300;
   line-height: 1.38;
 }
@@ -1089,14 +1087,14 @@ li {
     width: 33.33%;
   }
 }
-.blocks.long-block li {
+.blocks .num-text li {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
   width: 25%;
   height: auto;
 }
-.blocks.long-block li .number {
+.blocks .num-text li .number {
   font-size: 3.5rem;
   font-weight: 200;
   /* Fallback: Set a background color. */
@@ -1113,19 +1111,19 @@ li {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
-.blocks.long-block li .text {
+.blocks .num-text li .text {
   font-weight: 600;
   font-size: 21px;
   letter-spacing: -0.35px;
 }
 @media screen and (max-width: 600px) {
-  .blocks.long-block li .text {
+  .blocks .num-text li .text {
     font-size: 17px;
     letter-spacing: -0.28px;
   }
 }
 @media screen and (max-width: 600px) {
-  .blocks.long-block li {
+  .blocks .num-text li {
     width: 50%;
     min-width: 160px;
   }
