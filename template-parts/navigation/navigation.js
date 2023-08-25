@@ -9,7 +9,7 @@ export default class Navigation {
     this.elements = {
       $main: document.querySelectorAll(".header-main-navi, .header-meta"),
       $body: document.querySelector("body"),
-      $checkbox: document.querySelector("#navi-toggle"),
+      $checkbox: document.querySelector("#header-navi-toggle"),
     };
     // checkbox need to be unchecked, when the page newly loaded
     this.elements.$checkbox.checked = false;
@@ -90,9 +90,7 @@ export default class Navigation {
       this.elements.$body.classList.toggle("body-no-scroll");
     };
 
-    document
-      .querySelector("#navi-toggle")
-      .addEventListener("change", openToggle);
+    this.elements.$checkbox.addEventListener("change", openToggle);
   }
   // toggle submenu: Mobile
   toggleSubmenu_mobile() {

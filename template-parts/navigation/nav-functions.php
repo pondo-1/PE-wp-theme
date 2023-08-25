@@ -1,13 +1,5 @@
 <?php
 
-// create navigation menus
-register_nav_menus(array(
-  'primary' => __('Hauptnavigation', 'reboot'),
-  'meta' => __('Meta', 'reboot'),
-  'footer' => __('Footer', 'reboot'),
-  'social' => __('Social', 'reboot')
-));
-
 function getMenu($menu_name = 'primary', $depth = 0, $nav_class = '', $container = 'nav')
 {
   // get_nav_menu_locations() : Get our nav locations 

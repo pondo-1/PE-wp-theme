@@ -15,26 +15,20 @@
     </label>
     <div class="navigation">
       <div class="navigation__background">&nbsp;</div>
-      <?php getMenu('primary', 3, 'header-main-navi'); ?>
-      <!-- <nav class="navigation__nav">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>01</span>About Natous</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>02</span>Your benfits</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>03</span>Popular tours</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>04</span>Stories</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>05</span>Book now</a>
-          </li>
-        </ul>
-      </nav> -->
+      <?php $menu_name = 'primary' ?>
+      <?php if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) : ?>
+        <?php getMenu($menu_name, 3, 'header-main-navi'); ?>
+      <?php else : ?>
+        <nav class="nav header-main-navi">
+          <ul class="main-menu">
+            <li class="">No Menu for</li>
+            <li class="">Header(main) Menu Postion</li>
+            <li class=""><a href="/wp-admin/nav-menus.php" class="menu-link main-menu-link">To setting up</a></li>
+          </ul>
+        </nav>
+      <?php endif ?>
+
+
     </div>
   </div>
 </header>

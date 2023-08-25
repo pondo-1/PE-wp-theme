@@ -67,6 +67,14 @@ function pe_theme_features()
   add_editor_style(get_template_directory_uri() . '/css/acf-editor-style.css');
   add_editor_style(get_theme_file_uri('/asset/fonts/fonts.css'));
   add_editor_style(get_theme_file_uri('/build/index.css'));
+
+  // create navigation menus
+  register_nav_menus(array(
+    'primary' => __('Header(main)', 'PE_en'),
+    'meta' => __('Meta', 'PE_en'),
+    'footer' => __('Footer', 'PE_en'),
+    'social' => __('Social', 'PE_en')
+  ));
 }
 add_action('after_setup_theme', 'pe_theme_features');
 
