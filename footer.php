@@ -24,10 +24,10 @@
     </div>
     <!-- get Menu is defined in  template-parts/nav-functions.php-->
     <div class="navigation right">
-      <?php $menu_name = 'footer' ?>
-      <div class="navigation__heading">Menu name</div>
-      <?php if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) : ?>
-        <?php getMenu($menu_name, $depth = 2, $nav_class = 'sitemap'); ?>
+      <?php $menu_loc = 'footer' ?>
+      <?php if (($locations = get_nav_menu_locations()) && isset($locations[$menu_loc])) : ?>
+        <div class="navigation__heading"><?php echo wp_get_nav_menu_name($menu_loc); ?></div>
+        <?php getMenu($menu_loc, $depth = 2, $nav_class = 'navigation__content'); ?>
       <?php else : ?>
         <div class="navigation__heading">Menu name</div>
         <nav class="nav header-main-navi">

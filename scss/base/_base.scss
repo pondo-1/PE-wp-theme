@@ -14,15 +14,15 @@ a {
   color: inherit;
 }
 //dev perpose
-section.module {
-  border: solid 1px red;
-  .container {
-    border: solid 1px green;
-  }
-}
+// section.module {
+//   border: solid 1px red;
+//   .container {
+//     border: solid 1px green;
+//   }
+// }
 
 .module {
-  margin: 10px auto;
+  margin: 10rem auto;
   position: relative;
   z-index: $m-z-index-default;
   max-width: 1600px;

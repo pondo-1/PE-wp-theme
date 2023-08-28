@@ -113,15 +113,8 @@ a {
   color: inherit;
 }
 
-section.module {
-  border: solid 1px red;
-}
-section.module .container {
-  border: solid 1px green;
-}
-
 .module {
-  margin: 10px auto;
+  margin: 10rem auto;
   position: relative;
   z-index: 10;
   max-width: 1600px;
@@ -336,12 +329,9 @@ li {
   display: block;
 }
 
-.footer {
-  background-color: #000000;
-}
 .footer .container {
   padding-top: 5rem;
-  padding-bottom: 8rem;
+  padding-bottom: 3rem;
   margin-bottom: 0;
   flex-wrap: wrap;
   row-gap: 2rem;
@@ -375,6 +365,14 @@ li {
     font-size: 14px;
     letter-spacing: -0.28px;
   }
+}
+.footer .info__content a,
+.footer .navigation__content a {
+  text-decoration: none;
+}
+.footer .info__content ul li:before,
+.footer .navigation__content ul li:before {
+  content: "- ";
 }
 .footer .info {
   min-width: 400px;
