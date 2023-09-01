@@ -2,9 +2,12 @@
   <div class="container">
     <div class="header__logo-box">
       <a href="<?= esc_url(home_url('/')); ?>" rel="home" class="center">
+        <!-- prettier-ignore -->
         <?php $site_logo = get_field('site_logo', 'option'); ?>
         <?php if ($site_logo) : ?>
           <?php echo wp_get_attachment_image($site_logo); ?>
+        <?php else : ?>
+          <img width="207" height="48" src="<?php echo get_template_directory_uri() ?>/asset/img/Pageeffect_logo.svg" class="attachment-thumbnail size-thumbnail" alt="Pageeffect logo" decoding="async">
         <?php endif; ?>
       </a>
     </div>

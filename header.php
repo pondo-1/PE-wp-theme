@@ -23,6 +23,7 @@
   <?php wp_head(); ?>
 </head>
 
+<canvas id="canvas" class="canvas"></canvas>
 
 <body <?php body_class(); ?>>
 

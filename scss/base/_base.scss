@@ -5,6 +5,16 @@
   padding: 0;
   box-sizing: inherit;
 }
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  // background-color: yellow;
+}
 body {
   box-sizing: border-box;
   background-color: $c-bg-basic;
@@ -25,7 +35,7 @@ a {
   margin: 10rem auto;
   position: relative;
   z-index: $m-z-index-default;
-  max-width: 1600px;
+  // max-width: 1600px;
   overflow: hidden;
   &__heading {
     margin-bottom: $row-gap;

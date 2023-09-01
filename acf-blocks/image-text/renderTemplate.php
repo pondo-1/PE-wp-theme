@@ -2,8 +2,16 @@
   <div class="container">
     <div class="text-wrapper text-box">
       <?php the_field('textbox-editor'); ?>
-      <?php $cta = get_field('cta'); ?>
-      <?php echo acf_relative_path($cta); ?>
+
+      <?php $linktype = get_field('CTA-button:link-type'); ?>
+      <?php if ($linktype == 'url') : ?>
+        <?php $url_object = get_field('CTA-button:url'); ?>
+        <?php echo acf_relative_path($url_object); ?>
+      <?php elseif ($linktype == 'postid') : ?>
+        <?php $postid = get_field('CTA-button:postid'); ?>
+        <?php echo postid_to_url($postid); ?>
+      <?php endif ?>
+
     </div>
     <div class="image-wrapper">
       <div class="image gradient-border-shadow">

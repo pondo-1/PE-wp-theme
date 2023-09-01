@@ -5620,7 +5620,7 @@ function Zoom(_ref) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "c": function() { return /* binding */ classesToSelector; }
+/* harmony export */   c: function() { return /* binding */ classesToSelector; }
 /* harmony export */ });
 function classesToSelector(classes) {
   if (classes === void 0) {
@@ -5643,7 +5643,7 @@ function classesToSelector(classes) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "c": function() { return /* binding */ createElementIfNotDefined; }
+/* harmony export */   c: function() { return /* binding */ createElementIfNotDefined; }
 /* harmony export */ });
 /* harmony import */ var _utils_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils.mjs */ "./node_modules/swiper/shared/utils.mjs");
 
@@ -5679,7 +5679,7 @@ function createElementIfNotDefined(swiper, originalParams, params, checkProps) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "c": function() { return /* binding */ createShadow; }
+/* harmony export */   c: function() { return /* binding */ createShadow; }
 /* harmony export */ });
 /* harmony import */ var _utils_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils.mjs */ "./node_modules/swiper/shared/utils.mjs");
 
@@ -5708,7 +5708,7 @@ function createShadow(suffix, slideEl, side) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "e": function() { return /* binding */ effectInit; }
+/* harmony export */   e: function() { return /* binding */ effectInit; }
 /* harmony export */ });
 function effectInit(params) {
   const {
@@ -5780,7 +5780,7 @@ function effectInit(params) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "e": function() { return /* binding */ effectTarget; }
+/* harmony export */   e: function() { return /* binding */ effectTarget; }
 /* harmony export */ });
 /* harmony import */ var _utils_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils.mjs */ "./node_modules/swiper/shared/utils.mjs");
 
@@ -5807,7 +5807,7 @@ function effectTarget(effectParams, slideEl) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "e": function() { return /* binding */ effectVirtualTransitionEnd; }
+/* harmony export */   e: function() { return /* binding */ effectVirtualTransitionEnd; }
 /* harmony export */ });
 /* harmony import */ var _utils_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils.mjs */ "./node_modules/swiper/shared/utils.mjs");
 
@@ -5870,8 +5870,8 @@ function effectVirtualTransitionEnd(_ref) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "a": function() { return /* binding */ getWindow; },
-/* harmony export */   "g": function() { return /* binding */ getDocument; }
+/* harmony export */   a: function() { return /* binding */ getWindow; },
+/* harmony export */   g: function() { return /* binding */ getDocument; }
 /* harmony export */ });
 /**
  * SSR Window 4.0.2
@@ -6030,8 +6030,8 @@ function getWindow() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "S": function() { return /* binding */ Swiper; },
-/* harmony export */   "d": function() { return /* binding */ defaults; }
+/* harmony export */   S: function() { return /* binding */ Swiper; },
+/* harmony export */   d: function() { return /* binding */ defaults; }
 /* harmony export */ });
 /* harmony import */ var _ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ssr-window.esm.mjs */ "./node_modules/swiper/shared/ssr-window.esm.mjs");
 /* harmony import */ var _utils_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils.mjs */ "./node_modules/swiper/shared/utils.mjs");
@@ -9653,25 +9653,25 @@ Swiper.use([Resize, Observer]);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "a": function() { return /* binding */ elementParents; },
-/* harmony export */   "b": function() { return /* binding */ elementOffset; },
-/* harmony export */   "c": function() { return /* binding */ createElement; },
-/* harmony export */   "d": function() { return /* binding */ now; },
-/* harmony export */   "e": function() { return /* binding */ elementChildren; },
-/* harmony export */   "f": function() { return /* binding */ elementOuterSize; },
-/* harmony export */   "g": function() { return /* binding */ elementIndex; },
-/* harmony export */   "h": function() { return /* binding */ getTranslate; },
-/* harmony export */   "i": function() { return /* binding */ elementTransitionEnd; },
-/* harmony export */   "j": function() { return /* binding */ isObject; },
-/* harmony export */   "k": function() { return /* binding */ getSlideTransformEl; },
-/* harmony export */   "l": function() { return /* binding */ elementStyle; },
-/* harmony export */   "m": function() { return /* binding */ elementNextAll; },
-/* harmony export */   "n": function() { return /* binding */ nextTick; },
-/* harmony export */   "o": function() { return /* binding */ elementPrevAll; },
-/* harmony export */   "p": function() { return /* binding */ animateCSSModeScroll; },
-/* harmony export */   "q": function() { return /* binding */ extend; },
-/* harmony export */   "r": function() { return /* binding */ deleteProps; },
-/* harmony export */   "s": function() { return /* binding */ setCSSProperty; }
+/* harmony export */   a: function() { return /* binding */ elementParents; },
+/* harmony export */   b: function() { return /* binding */ elementOffset; },
+/* harmony export */   c: function() { return /* binding */ createElement; },
+/* harmony export */   d: function() { return /* binding */ now; },
+/* harmony export */   e: function() { return /* binding */ elementChildren; },
+/* harmony export */   f: function() { return /* binding */ elementOuterSize; },
+/* harmony export */   g: function() { return /* binding */ elementIndex; },
+/* harmony export */   h: function() { return /* binding */ getTranslate; },
+/* harmony export */   i: function() { return /* binding */ elementTransitionEnd; },
+/* harmony export */   j: function() { return /* binding */ isObject; },
+/* harmony export */   k: function() { return /* binding */ getSlideTransformEl; },
+/* harmony export */   l: function() { return /* binding */ elementStyle; },
+/* harmony export */   m: function() { return /* binding */ elementNextAll; },
+/* harmony export */   n: function() { return /* binding */ nextTick; },
+/* harmony export */   o: function() { return /* binding */ elementPrevAll; },
+/* harmony export */   p: function() { return /* binding */ animateCSSModeScroll; },
+/* harmony export */   q: function() { return /* binding */ extend; },
+/* harmony export */   r: function() { return /* binding */ deleteProps; },
+/* harmony export */   s: function() { return /* binding */ setCSSProperty; }
 /* harmony export */ });
 /* harmony import */ var _ssr_window_esm_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ssr-window.esm.mjs */ "./node_modules/swiper/shared/ssr-window.esm.mjs");
 
@@ -9960,7 +9960,7 @@ function elementOuterSize(el, size, includeMargins) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Swiper": function() { return /* reexport safe */ _shared_swiper_core_mjs__WEBPACK_IMPORTED_MODULE_0__.S; },
+/* harmony export */   Swiper: function() { return /* reexport safe */ _shared_swiper_core_mjs__WEBPACK_IMPORTED_MODULE_0__.S; },
 /* harmony export */   "default": function() { return /* reexport safe */ _shared_swiper_core_mjs__WEBPACK_IMPORTED_MODULE_0__.S; }
 /* harmony export */ });
 /* harmony import */ var _shared_swiper_core_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shared/swiper-core.mjs */ "./node_modules/swiper/shared/swiper-core.mjs");
@@ -10141,6 +10141,97 @@ const swiper = new _node_modules_swiper_swiper_bundle_mjs__WEBPACK_IMPORTED_MODU
     prevEl: ".swiper-button-prev"
   }
 });
+
+// Background Animation
+const rand = function (min, max) {
+  return Math.random() * (max - min) + min;
+};
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+window.addEventListener("resize", function () {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  ctx = canvas.getContext("2d");
+  ctx.globalCompositeOperation = "lighter";
+});
+let backgroundColors = ["#000", "#000"];
+let colors = [["#002aff", "#009ff2"], ["#0054ff", "#27e49b"], ["#202bc5", "#873dcc"]];
+let count = 5;
+let blur = [12, 70];
+let radius = [1, 120];
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+ctx.globalCompositeOperation = "lighter";
+let grd = ctx.createLinearGradient(0, canvas.height, canvas.width, 0);
+grd.addColorStop(0, backgroundColors[0]);
+grd.addColorStop(1, backgroundColors[1]);
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+let items = [];
+while (count--) {
+  let thisRadius = rand(radius[0], radius[1]);
+  let thisBlur = rand(blur[0], blur[1]);
+  let x = rand(-100, canvas.width + 100);
+  let y = rand(-100, canvas.height + 100);
+  let colorIndex = Math.floor(rand(0, 299) / 100);
+  let colorOne = colors[colorIndex][0];
+  let colorTwo = colors[colorIndex][1];
+  ctx.beginPath();
+  ctx.filter = `blur(${thisBlur}px)`;
+  let grd = ctx.createLinearGradient(x - thisRadius / 2, y - thisRadius / 2, x + thisRadius, y + thisRadius);
+  grd.addColorStop(0, colorOne);
+  grd.addColorStop(1, colorTwo);
+  ctx.fillStyle = grd;
+  ctx.fill();
+  ctx.arc(x, y, thisRadius, 0, Math.PI * 2);
+  ctx.closePath();
+  let directionX = Math.round(rand(-99, 99) / 100);
+  let directionY = Math.round(rand(-99, 99) / 100);
+  items.push({
+    x: x,
+    y: y,
+    blur: thisBlur,
+    radius: thisRadius,
+    initialXDirection: directionX,
+    initialYDirection: directionY,
+    initialBlurDirection: directionX,
+    colorOne: colorOne,
+    colorTwo: colorTwo,
+    gradient: [x - thisRadius / 2, y - thisRadius / 2, x + thisRadius, y + thisRadius]
+  });
+}
+function changeCanvas(timestamp) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  let adjX = 2;
+  let adjY = 2;
+  let adjBlur = 1;
+  items.forEach(function (item) {
+    if (item.x + item.initialXDirection * adjX >= canvas.width && item.initialXDirection !== 0 || item.x + item.initialXDirection * adjX <= 0 && item.initialXDirection !== 0) {
+      item.initialXDirection = item.initialXDirection * -1;
+    }
+    if (item.y + item.initialYDirection * adjY >= canvas.height && item.initialYDirection !== 0 || item.y + item.initialYDirection * adjY <= 0 && item.initialYDirection !== 0) {
+      item.initialYDirection = item.initialYDirection * -1;
+    }
+    if (item.blur + item.initialBlurDirection * adjBlur >= radius[1] && item.initialBlurDirection !== 0 || item.blur + item.initialBlurDirection * adjBlur <= radius[0] && item.initialBlurDirection !== 0) {
+      item.initialBlurDirection *= -1;
+    }
+    item.x += item.initialXDirection * adjX;
+    item.y += item.initialYDirection * adjY;
+    item.blur += item.initialBlurDirection * adjBlur;
+    ctx.beginPath();
+    ctx.filter = `blur(${item.blur}px)`;
+    let grd = ctx.createLinearGradient(item.gradient[0], item.gradient[1], item.gradient[2], item.gradient[3]);
+    grd.addColorStop(0, item.colorOne);
+    grd.addColorStop(1, item.colorTwo);
+    ctx.fillStyle = grd;
+    ctx.arc(item.x, item.y, item.radius, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.closePath();
+  });
+  window.requestAnimationFrame(changeCanvas);
+}
+window.requestAnimationFrame(changeCanvas);
 }();
 /******/ })()
 ;

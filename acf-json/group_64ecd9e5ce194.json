@@ -1,0 +1,110 @@
+{
+    "key": "group_64ecd9e5ce194",
+    "title": "element: CTA-button",
+    "fields": [
+        {
+            "key": "field_64ecda0db03d1",
+            "label": "type of Link",
+            "name": "CTA-button:link-type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "url": "(External) Link",
+                "postid": "Post ID"
+            },
+            "default_value": "url",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_64ecd9e6b03d0",
+            "label": "(External) Link",
+            "name": "CTA-button:url",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Url will be saved as a string. If the permalink of a post changed, the link will lead to 404 page.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64ecda0db03d1",
+                        "operator": "==",
+                        "value": "url"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "73",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_64ecda8cc535b",
+            "label": "Link from Post ID",
+            "name": "CTA-button:postid",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Post ID will be saved. This is safe from the changes of Permalink. \r\nPost title -> Link title. Target -> self",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64ecda0db03d1",
+                        "operator": "==",
+                        "value": "postid"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "80",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page",
+                "post"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Link can be saved either as url or as Post-id.",
+    "show_in_rest": 0,
+    "modified": 1693389783
+}

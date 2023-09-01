@@ -66,11 +66,11 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_64de029fc2b7a",
-            "label": "CTA",
-            "name": "cta",
+            "key": "field_64ecdbf944e30",
+            "label": "CTA-button",
+            "name": "CTA-button",
             "aria-label": "",
-            "type": "link",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -79,7 +79,13 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "clone": [
+                "group_64ecd9e5ce194"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -100,5 +106,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692280302
+    "modified": 1693387912
 }
