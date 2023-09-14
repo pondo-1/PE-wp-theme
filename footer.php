@@ -17,7 +17,7 @@
         <p class="email">info@page-effekt.de</p>
         <p class="address">Kleinwernfeld 8, 97737 Gemünden, Deutschland</p>
         <p class="register-number">
-          Handelsregister: Amstgericht Würzburg HRA 7868
+         Just Testing Handelsregister: Amstgericht Würzburg HRA 7868
         </p>
         <p class="ust">USt-IdNr: DE282624108</p>
       </div>
