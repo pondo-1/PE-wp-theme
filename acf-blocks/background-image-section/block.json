@@ -1,0 +1,14 @@
+{
+    "name": "acf/background-image-section",
+    "title": "Background Image Section",
+    "description": "Background Image Section",
+    "category": "",
+    "icon": "plus",
+    "keywords": [""],
+    "acf": {
+      "renderTemplate": "renderTemplate.php"
+    },
+    "supports": {
+      "align": [""]
+    }
+  }
