@@ -1,0 +1,34 @@
+.background_image_section {
+    .container {
+      @include flex(row, unset);
+      justify-content: space-between;
+  
+      .content-wrapper {
+        @include flex(column);
+        width: 55%;
+      }
+  
+      .image-wrapper {
+        width: 380px;
+      }
+    }
+    @media screen and (max-width: $bp-tablet) {
+      .container {
+        @include flex(column, $row-gap--small);
+        .image-wrapper {
+          order: 1;
+          max-width: 380px;
+          width: 60vw;
+          margin-left: auto;
+          img {
+            transform: translateX(10%);
+          }
+        }
+        .content-wrapper {
+          order: 2;
+          width: 100%;
+          // row-gap: $row-gap--small;
+        }
+      }
+    }
+  }

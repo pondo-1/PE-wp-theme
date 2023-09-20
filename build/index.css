@@ -896,6 +896,43 @@ li {
 .project-slider .swiper-button-prev {
   left: calc(50% - 150px);
 }
+
+.background_image_section .container {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: unset;
+       column-gap: unset;
+  justify-content: space-between;
+}
+.background_image_section .container .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: unset;
+  width: 55%;
+}
+.background_image_section .container .image-wrapper {
+  width: 380px;
+}
+@media screen and (max-width: 900px) {
+  .background_image_section .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .background_image_section .container .image-wrapper {
+    order: 1;
+    max-width: 380px;
+    width: 60vw;
+    margin-left: auto;
+  }
+  .background_image_section .container .image-wrapper img {
+    transform: translateX(10%);
+  }
+  .background_image_section .container .content-wrapper {
+    order: 2;
+    width: 100%;
+  }
+}
 /*!*******************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/swiper/swiper-bundle.css ***!
   \*******************************************************************************************************************************************************************************************/
