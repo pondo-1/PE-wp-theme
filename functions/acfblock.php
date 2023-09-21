@@ -32,4 +32,5 @@ new ACFblock("blocks");
 new ACFblock("text-features");
 new ACFblock("project-slider");
 new ACFblock("background-image-section");
+new ACFblock("text-left");
 

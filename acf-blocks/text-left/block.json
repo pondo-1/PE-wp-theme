@@ -1,0 +1,14 @@
+{
+    "name": "acf/text-left",
+    "title": "Text Left",
+    "description": "Text Links für Artikelseiten unter Header mit Background",
+    "category": "",
+    "icon": "plus",
+    "keywords": [""],
+    "acf": {
+      "renderTemplate": "renderTemplate.php"
+    },
+    "supports": {
+      "align": [""]
+    }
+  }

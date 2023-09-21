@@ -1,4 +1,6 @@
-<section class="module background_image_section">
+<section class="module bg_image hero" style="background-image:url(
+  <?php the_post_thumbnail_url(); ?>
+)";>
   <div class="container">
     <div class="content-wrapper text-box">
       <div class="headline">
@@ -22,14 +24,10 @@
           the_row(); ?>
 
           <div class="image-wrapper">
-            <?php $hero_image = get_field('hero-image'); ?>
+            <?php $image_contact = the_sub_field('image-contact'); ?>
             <?php $size = 'medium'; ?>
-            <?php if ($hero_image): ?>
-              <?php echo wp_get_attachment_image($hero_image, $size); ?>
-            <?php else: ?>
-              <img src="<?php echo get_template_directory_uri(); ?>/asset/img/default-Profil.png" alt="real"
+              <img src="<?php $image_contact; ?>" alt="Foto Kontakt"
                 sizes="(max-width: 500px) 100vw, 500px">
-            <?php endif; ?>
             <div class="text_wrapper">
               <q class="quote">
                 <?php the_sub_field('quote'); ?>
@@ -48,13 +46,6 @@
         <?php endwhile; ?>
       <?php endif; ?>
     </div>
-    <?php if (get_field('background_image')): ?>
-      <img src="<?php the_field('background_image'); ?>" />
-    <?php else: ?>
-      <img src="<?php echo get_template_directory_uri(); ?>/asset/img/sample-code.png" alt="real"
-        sizes="(max-width: 500px) 100vw, 500px">
-    <?php endif; ?>
-    <div class="long_copy">
-      <?php the_field('long_copy'); ?>
-    </div>
+  </div>
+
 </section>
