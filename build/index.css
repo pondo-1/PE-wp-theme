@@ -903,14 +903,14 @@ li {
   left: calc(50% - 150px);
 }
 
-.hero.bg_image {
+.bg_image_hero {
   overflow: visible;
   margin-top: 0;
   padding-top: 10rem;
   z-index: -1;
   background-repeat: no-repeat;
 }
-.hero.bg_image::before {
+.bg_image_hero::before {
   background-color: rgba(0, 0, 0, 0.85);
   position: absolute;
   width: 100%;
@@ -920,25 +920,25 @@ li {
   top: 0;
   z-index: -2;
 }
-.hero.bg_image .container {
+.bg_image_hero .container {
   display: flex;
   flex-direction: row;
   -moz-column-gap: unset;
        column-gap: unset;
   justify-content: space-between;
 }
-.hero.bg_image .container .content-wrapper {
+.bg_image_hero .container .content-wrapper {
   display: flex;
   flex-direction: column;
   row-gap: unset;
   width: 55%;
   color: #fff;
 }
-.hero.bg_image .contact {
+.bg_image_hero .contact {
   position: relative;
   top: 20vh;
 }
-.hero.bg_image .contact .image-wrapper {
+.bg_image_hero .contact .image-wrapper {
   width: 380px;
 }
 
@@ -1012,11 +1012,15 @@ li {
       }
     }
   } */
-.text-left .container {
+.one-column .container {
   max-width: 1140px;
 }
-.text-left .container .text-box {
+.one-column .container .text-box {
   max-width: 680px;
+}
+.one-column .container .text-box.zentriert {
+  margin-left: auto;
+  margin-right: auto;
 }
 /*!*******************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/swiper/swiper-bundle.css ***!

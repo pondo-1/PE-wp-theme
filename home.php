@@ -1,7 +1,12 @@
 <?php
 
+
 /**
- * Defult template
+ * 
+ * This Template is used when no blocks are set up by the users
+ * The template for displaying start page
+ *
+ * This is the template that displays start page as defalut.
  *
  */
 // get_header();

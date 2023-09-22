@@ -10,6 +10,6 @@
  */
 ?>
 
-<?php get_header( 'bg' ); ?>
+<?php get_header(); ?>
 <?php the_content(); ?>
 <?php get_footer(); ?>

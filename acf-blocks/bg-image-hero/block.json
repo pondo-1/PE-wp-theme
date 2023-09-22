@@ -1,7 +1,7 @@
 {
-    "name": "acf/text-left",
-    "title": "Text Left",
-    "description": "Text Links für Artikelseiten unter Header mit Background",
+    "name": "acf/bg-image-hero",
+    "title": "Background Image Hero Section",
+    "description": "Background Image Hero Section",
     "category": "",
     "icon": "plus",
     "keywords": [""],

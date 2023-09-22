@@ -1,11 +1,37 @@
 {
     "key": "group_650c1f7280c00",
-    "title": "Text Left",
+    "title": "module: One Column",
     "fields": [
         {
+            "key": "field_650d8bf5456a8",
+            "label": "Textausrichtung",
+            "name": "align",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "links": "links",
+                "zentriert": "zentriert"
+            },
+            "default_value": "links",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_650c1f72905ec",
-            "label": "Text Left",
-            "name": "text_left",
+            "label": "Textbox",
+            "name": "textbox-editor",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -28,7 +54,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "all"
+                "value": "acf\/one-column"
             }
         ]
     ],
@@ -41,5 +67,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1695294266
+    "modified": 1695387091
 }

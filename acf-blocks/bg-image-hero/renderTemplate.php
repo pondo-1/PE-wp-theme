@@ -1,13 +1,10 @@
-<section class="module bg_image hero" style="background-image:url(
+<section class="module bg_image_hero" style="background-image:url(
   <?php the_post_thumbnail_url(); ?>
 )";>
   <div class="container">
     <div class="content-wrapper text-box">
-      <div class="headline">
-        <?php the_field('headline'); ?>
-      </div>
-      <div class="subheadline">
-        <?php the_field('subheadline'); ?>
+      <div class="textbox-editor">
+        <?php the_field('textbox-editor'); ?>
       </div>
       <?php $linktype = get_field('cta'); ?>
       <?php if ($linktype == 'url'): ?>
@@ -24,22 +21,21 @@
           the_row(); ?>
 
           <div class="image-wrapper">
-            <?php $image_contact = the_sub_field('image-contact'); ?>
+          <?php $image_contact = get_sub_field('contact-image'); ?>
             <?php $size = 'medium'; ?>
-              <img src="<?php $image_contact; ?>" alt="Foto Kontakt"
-                sizes="(max-width: 500px) 100vw, 500px">
+            <?php echo wp_get_attachment_image( $image_contact, $size); ?>
             <div class="text_wrapper">
               <q class="quote">
                 <?php the_sub_field('quote'); ?>
               </q>
-              <div class="position">
-                <?php the_sub_field('position'); ?>
-              </div>
-              <div class="email">
+              <div class="email"><span>Email: </span><a href="mailto:
                 <?php the_sub_field('email'); ?>
+                ">
+              <?php the_sub_field('email'); ?>
+              </a>
               </div>
-              <div class="telefon">
-                <?php the_sub_field('phone'); ?>
+              <div class="phone"><span>Tel: </span>
+                <?php the_sub_field('phone'); ?>            
               </div>
             </div>
           </div>

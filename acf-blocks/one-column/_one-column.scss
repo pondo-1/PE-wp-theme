@@ -1,4 +1,4 @@
-.text-left {
+.one-column {
    
 
     .container {
@@ -6,6 +6,11 @@
 
         .text-box {
             max-width: 680px;
+        }
+
+        .text-box.zentriert {
+            margin-left:  auto;
+            margin-right:  auto;
         }
         
     }

@@ -1,7 +1,7 @@
 {
-    "name": "acf/background-image-section",
-    "title": "Background Image Section",
-    "description": "Background Image Section",
+    "name": "acf/one-column",
+    "title": "Eine Spalte",
+    "description": "Eine Spalte für Text und Bilder, links, zentiert",
     "category": "",
     "icon": "plus",
     "keywords": [""],

@@ -31,6 +31,6 @@ new ACFblock("features");
 new ACFblock("blocks");
 new ACFblock("text-features");
 new ACFblock("project-slider");
-new ACFblock("background-image-section");
-new ACFblock("text-left");
+new ACFblock("bg-image-hero");
+new ACFblock("one-column");
 
