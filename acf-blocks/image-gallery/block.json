@@ -1,0 +1,14 @@
+{
+    "name": "acf/image-gallery",
+    "title": "Bildgalerie",
+    "description": "Bildgalerie",
+    "category": "",
+    "icon": "plus",
+    "keywords": [""],
+    "acf": {
+      "renderTemplate": "renderTemplate.php"
+    },
+    "supports": {
+      "align": [""]
+    }
+  }

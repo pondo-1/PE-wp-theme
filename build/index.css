@@ -962,56 +962,6 @@ li {
     width: 100%;
   }
 }
-/* .background_image_section {
-  margin-top: 0;
-  /*
-  padding-top: 10rem;
-
-
-
-
-    .container {
-      display: grid;
-      grid-template-columns: 55% 380px;
-            justify-content: space-between;
-            grid-template-rows: max-content max-content max-content;
-
-      .content-wrapper {
-        grid-column: 1/2;
-      }
-
-      .contact {
-        grid-column: 2/3;
-        grid-row: 1/3;
-      }
-
-      .long-copy {
-        grid-column: 1/2;
-        grid-row: 3/4;
-      }
-
-
-    }
-    @media screen and (max-width: $bp-tablet) {
-      .container {
-        @include flex(column, $row-gap--small);
-        .image-wrapper {
-          order: 1;
-          max-width: 380px;
-          width: 60vw;
-          margin-left: auto;
-          img {
-            transform: translateX(10%);
-          }
-        }
-        .content-wrapper {
-          order: 2;
-          width: 100%;
-          // row-gap: $row-gap--small;
-        }
-      }
-    }
-  } */
 .one-column .container {
   max-width: 1140px;
 }
@@ -1021,6 +971,34 @@ li {
 .one-column .container .text-box.zentriert {
   margin-left: auto;
   margin-right: auto;
+}
+
+.image-gallery .container {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: unset;
+       column-gap: unset;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.image-gallery .image-wrapper {
+  width: 380px;
+}
+@media screen and (max-width: 900px) {
+  .image-gallery .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .image-gallery .container .image-wrapper {
+    order: 1;
+    max-width: 380px;
+    width: 60vw;
+    margin-left: auto;
+  }
+  .image-gallery .container .image-wrapper img {
+    transform: translateX(10%);
+  }
 }
 /*!*******************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/swiper/swiper-bundle.css ***!
