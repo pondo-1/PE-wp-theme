@@ -1,0 +1,14 @@
+{
+    "name": "acf/contactform",
+    "title": "contactform",
+    "description": "Kontaktformular",
+    "category": "",
+    "icon": "plus",
+    "keywords": [""],
+    "acf": {
+      "renderTemplate": "renderTemplate.php"
+    },
+    "supports": {
+      "align": [""]
+    }
+  }

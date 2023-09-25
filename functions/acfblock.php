@@ -34,3 +34,5 @@ new ACFblock("project-slider");
 new ACFblock("bg-image-hero");
 new ACFblock("one-column");
 new ACFblock("image-gallery");
+new ACFblock("contactform");
+
