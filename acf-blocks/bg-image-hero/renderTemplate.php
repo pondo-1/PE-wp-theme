@@ -1,6 +1,6 @@
 <section class="module bg_image_hero" style="background-image:url(
   <?php the_post_thumbnail_url(); ?>
-)";>
+)">
   <div class="container">
     <div class="content-wrapper text-box">
       <div class="textbox-editor">
@@ -20,14 +20,18 @@
         <?php while (have_rows('contact')):
           the_row(); ?>
 
-          <div class="image-wrapper">
+          <div class="image-wrapper contact-img-bg">
           <?php $image_contact = get_sub_field('contact-image'); ?>
             <?php $size = 'medium'; ?>
             <?php echo wp_get_attachment_image( $image_contact, $size); ?>
+            </div>
             <div class="text_wrapper">
               <q class="quote">
                 <?php the_sub_field('quote'); ?>
               </q>
+              <div class="position_and_name">
+                <?php the_sub_field('position_and_name'); ?>            
+              </div>
               <div class="email"><span>Email: </span><a href="mailto:
                 <?php the_sub_field('email'); ?>
                 ">
@@ -38,7 +42,7 @@
                 <?php the_sub_field('phone'); ?>            
               </div>
             </div>
-          </div>
+          
         <?php endwhile; ?>
       <?php endif; ?>
     </div>

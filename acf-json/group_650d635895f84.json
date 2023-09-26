@@ -124,6 +124,26 @@
                     "append": ""
                 },
                 {
+                    "key": "field_6512881ac9d90",
+                    "label": "Position and Name",
+                    "name": "position_and_name",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
                     "key": "field_650d63ff678a1",
                     "label": "email",
                     "name": "email",
@@ -184,5 +204,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1695376577
+    "modified": 1695713543
 }

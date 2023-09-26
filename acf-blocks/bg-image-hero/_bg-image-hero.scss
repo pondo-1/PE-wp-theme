@@ -30,11 +30,42 @@
   .contact {
     position: relative;
     top: 20vh;
+    font-size: 18px;
 
     .image-wrapper {
+      @include contact-img-color;
       width: 380px;
-    }
+    
   }
+  
+.quote {
+font-family: "Barlow Semi Condensed";
+font-size: 36px;
+letter-spacing: -0.27px;
+line-height: 46px;
+padding-bottom: 30px;
+max-width: 360px;
+display: block;
+position: relative;  
+
+
+&::before,
+&::after {
+  position: absolute;
+}
+
+&::before {
+  left: -8px;
+}
+}
+
+span {
+  color: $c-f-red;
+  font-weight: 600;
+}
+
+
+}
 }
 @media screen and (max-width: $bp-tablet) {
   .container {
@@ -44,6 +75,7 @@
       max-width: 380px;
       width: 60vw;
       margin-left: auto;
+
       img {
         transform: translateX(10%);
       }

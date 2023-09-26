@@ -937,9 +937,50 @@ li {
 .bg_image_hero .contact {
   position: relative;
   top: 20vh;
+  font-size: 18px;
 }
 .bg_image_hero .contact .image-wrapper {
+  position: relative;
   width: 380px;
+}
+.bg_image_hero .contact .image-wrapper::before, .bg_image_hero .contact .image-wrapper::after {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  content: "";
+  z-index: -1;
+}
+.bg_image_hero .contact .image-wrapper::before {
+  background-color: #9a60c2;
+  left: -20px;
+  top: 45px;
+}
+.bg_image_hero .contact .image-wrapper::after {
+  background-color: #e05976;
+  filter: blur(8px);
+  left: 15px;
+  top: 8px;
+}
+.bg_image_hero .contact .quote {
+  font-family: "Barlow Semi Condensed";
+  font-size: 36px;
+  letter-spacing: -0.27px;
+  line-height: 46px;
+  padding-bottom: 30px;
+  max-width: 360px;
+  display: block;
+  position: relative;
+}
+.bg_image_hero .contact .quote::before, .bg_image_hero .contact .quote::after {
+  position: absolute;
+}
+.bg_image_hero .contact .quote::before {
+  left: -8px;
+}
+.bg_image_hero .contact span {
+  color: #e05976;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 900px) {
