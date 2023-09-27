@@ -4,6 +4,13 @@
     @include flex(row, unset);
     justify-content: space-between;   
    
+    .gform_required_legend {
+      display: none;
+    }
+
+    .contactform-wrapper {
+      background-color: #fff;
+    }
   }
 }
   

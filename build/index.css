@@ -903,7 +903,7 @@ li {
   left: calc(50% - 150px);
 }
 
-.bg_image_hero {
+.bg_image_hero.module {
   overflow: visible;
   margin-top: 0;
   padding-top: 10rem;
@@ -1082,6 +1082,12 @@ li {
   -moz-column-gap: unset;
        column-gap: unset;
   justify-content: space-between;
+}
+.contactform .container .gform_required_legend {
+  display: none;
+}
+.contactform .container .contactform-wrapper {
+  background-color: #fff;
 }
 
 @media screen and (max-width: 900px) {

@@ -1,14 +1,16 @@
 .bg_image_hero {
-  overflow: visible;
-  margin-top: 0;
-  padding-top: 10rem;
-  z-index: 2;
-  background-repeat: no-repeat;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 35%;
-  margin-left: -30vw;
-  margin-right: -30vw;
-  margin-bottom: -50px;
+  &.module{
+    overflow: visible;
+    margin-top: 0;
+    padding-top: 10rem;
+    z-index: 2;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 35%;
+    margin-left: -30vw;
+    margin-right: -30vw;
+    margin-bottom: -50px;
+  }
   
 
   &::before {
