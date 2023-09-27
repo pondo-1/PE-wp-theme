@@ -444,7 +444,7 @@ li {
   z-index: -1;
 }
 .hero .container .image-wrapper::before {
-  background-color: #9a60c2;
+  background-color: #00F;
   left: -20px;
   top: 45px;
 }
@@ -1017,7 +1017,7 @@ li {
   z-index: -1;
 }
 .bg_image_hero .container .contact .image-wrapper::before {
-  background-color: #9a60c2;
+  background-color: #00F;
   left: -20px;
   top: 45px;
 }
