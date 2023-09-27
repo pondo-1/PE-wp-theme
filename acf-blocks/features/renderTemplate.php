@@ -1,4 +1,4 @@
-<section class="module features bg-black">
+<section class="module features bg-black bg-oval oval-var-2">
   <div class="container">
     <?php the_field('textbox'); ?>
     <div class="module__content">

@@ -22,6 +22,8 @@
   $bg-color: $c-bg-black;
 
   color: $f-color;
+ 
+
   &.module {
     background: $bg-color;
   }
@@ -31,4 +33,26 @@
   .btn-empty {
     background-color: $bg-color;
   }
+}
+
+.bg-oval {
+  margin-left: -30vw;
+  margin-right: -30vw;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.oval-var-1 {
+  border-top-left-radius: 34%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 57%;
+   
+}
+
+.oval-var-2 {
+  border-top-left-radius: 68%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 57%;
+    border-bottom-left-radius: 30%;
 }

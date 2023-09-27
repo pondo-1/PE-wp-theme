@@ -1,4 +1,4 @@
-<section class="module image-text <?php the_field('order'); ?> <?php the_field('bg-color'); ?>">
+<section class="module image-text <?php the_field('order'); ?> <?php the_field('bg-color'); ?> bg-oval oval-var-1">
   <div class="container">
     <div class="text-wrapper text-box">
       <?php the_field('textbox-editor'); ?>

@@ -9,6 +9,7 @@
     }
 
     .image-wrapper {
+      @include contact-img-color;
       width: 380px;
     }
   }
