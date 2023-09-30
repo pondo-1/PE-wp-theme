@@ -38,9 +38,16 @@
 .bg-oval {
   margin-left: -30vw;
   margin-right: -30vw;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  transform: rotate(2deg);
+
+  .container {
+    transform: rotate(-2deg);
+  }
 }
+
+
 
 .oval-var-1 {
   border-top-left-radius: 34%;

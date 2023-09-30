@@ -45,3 +45,25 @@ function allowedBlockTypes($original_allowedBlocks, $post)
 }
 
 add_filter('allowed_block_types', 'allowedBlockTypes', 10, 2);
+
+
+// add classes to gravity form fields, see https://docs.gravityforms.com/gform_field_css_class/
+/* add_filter( 'gform_field_css_class', 'custom_class', 10, 3 );
+function custom_class( $classes, $field, $form ) {
+if ( $field->type == 'text' ) {
+$classes .= ' gradient-border-feature';
+}
+return $classes;
+} */
+
+//add class to gravity forms submit button, see https://docs.gravityforms.com/gform_submit_button/
+add_filter( 'gform_submit_button', 'add_custom_css_classes', 10, 2 );
+function add_custom_css_classes( $button, $form ) {
+    $dom = new DOMDocument();
+    $dom->loadHTML( '<?xml encoding="utf-8" ?>' . $button );
+    $input = $dom->getElementsByTagName( 'input' )->item(0);
+    $classes = $input->getAttribute( 'class' );
+    $classes .= " btn--empty";
+    $input->setAttribute( 'class', $classes );
+    return $dom->saveHtml( $input );
+}

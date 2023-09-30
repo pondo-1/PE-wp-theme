@@ -33,7 +33,8 @@
     z-index: -1;
     margin: -$border; /* !importanté */
     border-radius: inherit; /* !importanté */
-    background: linear-gradient(200deg, #e05976, #9a60c2);
+    // background: linear-gradient(200deg, #e05976, #9a60c2);
+    background: linear-gradient(200deg, $c-f-red, $sec-violett);
   }
 }
 
@@ -58,7 +59,7 @@
     border-radius: $border-radius;
   }
   &::before {
-    background: linear-gradient(200deg, #e05976, #9a60c2);
+    background: linear-gradient(200deg, $c-f-red, $sec-violett);
     z-index: $current-z-index + 1;
   }
   &::after {
@@ -129,3 +130,13 @@ position: relative;
   top: 8px;
 }
 } 
+
+@mixin btn {
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.55em 2.2em;
+  width: fit-content;
+  cursor: pointer;
+  background-color: $c-bg-basic;
+  }
