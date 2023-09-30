@@ -21,25 +21,21 @@
           the_row(); ?>
 
           <div class="image-wrapper contact-img-bg">
-          <?php $image_contact = get_sub_field('contact-image'); ?>
-            <?php $size = 'medium'; ?>
-            <?php echo wp_get_attachment_image( $image_contact, $size); ?>
+          <img src="<?php echo get_template_directory_uri(); ?>/asset/img/default-Profil.png" alt="real" sizes="(max-width: 500px) 100vw, 500px">
+
             </div>
             <div class="text_wrapper">
               <q class="quote">
                 <?php the_sub_field('quote'); ?>
               </q>
               <div class="position_and_name">
-                <?php the_sub_field('position_and_name'); ?>            
-              </div>
-              <div class="email"><span>Email: </span><a href="mailto:
-                <?php the_sub_field('email'); ?>
-                ">
-              <?php the_sub_field('email'); ?>
+<span>Inhaber: </span>Thomas Pondelek              </div>
+              <div class="email"><span>Email: </span><a href="mailto:info@page-effect.com">
+              info@page-effect.com
               </a>
               </div>
               <div class="phone"><span>Tel: </span>
-                <?php the_sub_field('phone'); ?>            
+              09351 9599991            
               </div>
             </div>
           
