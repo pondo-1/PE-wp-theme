@@ -62,3 +62,16 @@ $hambuger-width: 30px;
     transform: rotate(-45deg);
   }
 }
+
+// Black Background/Artikel
+
+.single-artikel .hamburger {
+  &__icon {
+
+    &,
+    &::before,
+    &::after {
+      background-color: #fff;
+    }
+}
+}

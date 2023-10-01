@@ -1,8 +1,10 @@
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   left: 0;
   top: 0;
+  background-color: $c-bg-basic;
+  z-index: 999;
 
   .container {
     display: flex;
@@ -38,5 +40,26 @@
   }
   .hamburger__checkbox:checked ~ .navigation {
     display: block;
+  }
+}
+
+// Black Background/Artikel
+
+.single-artikel .header {
+  background-color: rgba(0,0,0,1);
+  
+  
+  .header__logo-box {
+  visibility: hidden;
+  position: relative;
+  
+  &::before {
+    content: url("/asset/img/page-effect-logo-2023-white.svg");
+    position: absolute;
+    width: 100%;
+    display: block;
+    visibility: visible;
+  
+  }
   }
 }
