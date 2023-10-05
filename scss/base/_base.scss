@@ -5,17 +5,11 @@
   padding: 0;
   box-sizing: inherit;
 }
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0.5;
-  // background-color: yellow;
-}
+
+
+
+
+
 body {
   box-sizing: border-box;
   background-color: $c-bg-basic;
@@ -73,4 +67,79 @@ li {
   p:not(:last-child) {
     margin-bottom: 2rem;
   }
+}
+
+@media screen and (min-width:981px) {
+//Animation
+.animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  // background-color: yellow;
+
+  .point {
+    position: absolute;
+    border-radius: 50%;
+    transition-property: all;
+  transition-duration: 4s;
+  transition-timing-function: ease-out;
+}
+
+.point1 {
+  top: 400px;
+  right: 30%;
+    width: 300px;
+    height: 300px;
+    background-color: $c-f-red;
+    filter: blur(100px);
+    animation: change_color 5s linear 1s infinite alternate, change_size 5s ease-in-out 1s infinite alternate, move 5s ease-in-out 1s infinite alternate;
+}
+
+.point2 {
+  top: 400px;
+  right: 20%;
+    width: 500px;
+    height: 500px;
+    background-color: $sec-violett;
+    filter: blur(100px);
+    animation: change_color 5s linear 1s infinite alternate-reverse, change_size 5s ease-in-out 1s infinite alternate-reverse, move 5s ease-in-out 1s infinite alternate-reverse;
+}  
+
+
+@keyframes change_color {
+  0% {
+      background-color: $c-f-red;
+  }
+  100% {
+      background-color: $sec-violett;
+  }
+}
+
+@keyframes change_size {
+  0% {
+      height: 100px;
+      filter: blur(50px);
+  }
+  100% {
+    height: 500px;
+    filter: blur(200px);  }
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(0deg);
+    transform: translate(-5vw, -5vw)
+
+  }
+  100% {
+    transform: rotate(360deg);
+    transform: translate(5vw, 5vw);
+  }
+}
+
+}  
 }

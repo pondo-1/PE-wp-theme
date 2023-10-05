@@ -10142,33 +10142,61 @@ const swiper = new _node_modules_swiper_swiper_bundle_mjs__WEBPACK_IMPORTED_MODU
   }
 });
 
-// Background Animation
-const rand = function (min, max) {
+//Backround Animation New
+
+const point1 = document.getElementById('point1');
+document.addEventListener('mousemove', e => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+  point1.style.top = mouseY - 50 + "px"; //-50px : half of the height of the point
+  point1.style.left = mouseX - 50 + "px";
+});
+const point2 = document.getElementById('point2');
+document.addEventListener('mousemove', e => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+  point2.style.top = mouseY + 50 + "px";
+  point2.style.left = mouseX + 50 + "px";
+});
+
+// Background Animation old 
+/* const rand = function (min, max) {
   return Math.random() * (max - min) + min;
 };
+
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+
 window.addEventListener("resize", function () {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   ctx = canvas.getContext("2d");
   ctx.globalCompositeOperation = "lighter";
 });
-let backgroundColors = ["#000", "#000"];
-let colors = [["#002aff", "#009ff2"], ["#0054ff", "#27e49b"], ["#202bc5", "#873dcc"]];
-let count = 5;
-let blur = [12, 70];
-let radius = [1, 120];
-ctx.clearRect(0, 0, canvas.width, canvas.height);
+let backgroundColors = ["#fff", "#fff"];
+let colors = [
+  ["#e05976", "#4784ff"],
+  ["#4784ff", "#e05976"],
+  ["#e05976", "#4784ff"],
+];
+let count = 2;
+let blur = [90, 200];
+let radius = [60, 220];
+
+//ctx.clearRect(0, 0, canvas.width, canvas.height); // don't know
 ctx.globalCompositeOperation = "lighter";
+
 let grd = ctx.createLinearGradient(0, canvas.height, canvas.width, 0);
 grd.addColorStop(0, backgroundColors[0]);
 grd.addColorStop(1, backgroundColors[1]);
 ctx.fillStyle = grd;
 ctx.fillRect(0, 0, canvas.width, canvas.height);
+
 let items = [];
+
 while (count--) {
   let thisRadius = rand(radius[0], radius[1]);
   let thisBlur = rand(blur[0], blur[1]);
@@ -10177,17 +10205,30 @@ while (count--) {
   let colorIndex = Math.floor(rand(0, 299) / 100);
   let colorOne = colors[colorIndex][0];
   let colorTwo = colors[colorIndex][1];
+
   ctx.beginPath();
   ctx.filter = `blur(${thisBlur}px)`;
-  let grd = ctx.createLinearGradient(x - thisRadius / 2, y - thisRadius / 2, x + thisRadius, y + thisRadius);
+  let grd = ctx.createLinearGradient(
+    x - thisRadius / 2,
+    y - thisRadius / 2,
+    x + thisRadius,
+    y + thisRadius
+  );
+
   grd.addColorStop(0, colorOne);
   grd.addColorStop(1, colorTwo);
   ctx.fillStyle = grd;
   ctx.fill();
   ctx.arc(x, y, thisRadius, 0, Math.PI * 2);
   ctx.closePath();
-  let directionX = Math.round(rand(-99, 99) / 100);
-  let directionY = Math.round(rand(-99, 99) / 100);
+
+
+  //Speed 
+//  let directionX = Math.round(rand(-99, 99) / 100);
+  let directionX = 1;
+//  let directionY = Math.round(rand(-99, 99) / 100);
+let directionY = 1;
+
   items.push({
     x: x,
     y: y,
@@ -10198,30 +10239,58 @@ while (count--) {
     initialBlurDirection: directionX,
     colorOne: colorOne,
     colorTwo: colorTwo,
-    gradient: [x - thisRadius / 2, y - thisRadius / 2, x + thisRadius, y + thisRadius]
+    gradient: [
+      x - thisRadius / 2,
+      y - thisRadius / 2,
+      x + thisRadius,
+      y + thisRadius,
+    ],
   });
 }
+
 function changeCanvas(timestamp) {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   let adjX = 2;
   let adjY = 2;
   let adjBlur = 1;
   items.forEach(function (item) {
-    if (item.x + item.initialXDirection * adjX >= canvas.width && item.initialXDirection !== 0 || item.x + item.initialXDirection * adjX <= 0 && item.initialXDirection !== 0) {
+    if (
+      (item.x + item.initialXDirection * adjX >= canvas.width &&
+        item.initialXDirection !== 0) ||
+      (item.x + item.initialXDirection * adjX <= 0 &&
+        item.initialXDirection !== 0)
+    ) {
       item.initialXDirection = item.initialXDirection * -1;
     }
-    if (item.y + item.initialYDirection * adjY >= canvas.height && item.initialYDirection !== 0 || item.y + item.initialYDirection * adjY <= 0 && item.initialYDirection !== 0) {
+    if (
+      (item.y + item.initialYDirection * adjY >= canvas.height &&
+        item.initialYDirection !== 0) ||
+      (item.y + item.initialYDirection * adjY <= 0 &&
+        item.initialYDirection !== 0)
+    ) {
       item.initialYDirection = item.initialYDirection * -1;
     }
-    if (item.blur + item.initialBlurDirection * adjBlur >= radius[1] && item.initialBlurDirection !== 0 || item.blur + item.initialBlurDirection * adjBlur <= radius[0] && item.initialBlurDirection !== 0) {
+
+    if (
+      (item.blur + item.initialBlurDirection * adjBlur >= radius[1] &&
+        item.initialBlurDirection !== 0) ||
+      (item.blur + item.initialBlurDirection * adjBlur <= radius[0] &&
+        item.initialBlurDirection !== 0)
+    ) {
       item.initialBlurDirection *= -1;
     }
+
     item.x += item.initialXDirection * adjX;
     item.y += item.initialYDirection * adjY;
     item.blur += item.initialBlurDirection * adjBlur;
     ctx.beginPath();
     ctx.filter = `blur(${item.blur}px)`;
-    let grd = ctx.createLinearGradient(item.gradient[0], item.gradient[1], item.gradient[2], item.gradient[3]);
+    let grd = ctx.createLinearGradient(
+      item.gradient[0],
+      item.gradient[1],
+      item.gradient[2],
+      item.gradient[3]
+    );
     grd.addColorStop(0, item.colorOne);
     grd.addColorStop(1, item.colorTwo);
     ctx.fillStyle = grd;
@@ -10231,7 +10300,8 @@ function changeCanvas(timestamp) {
   });
   window.requestAnimationFrame(changeCanvas);
 }
-window.requestAnimationFrame(changeCanvas);
+
+window.requestAnimationFrame(changeCanvas); */
 }();
 /******/ })()
 ;

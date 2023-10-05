@@ -24,7 +24,7 @@
   border-radius: 15px;
 }
 .gradient-border-shadow::before {
-  background: linear-gradient(200deg, #e05976, #009fff);
+  background: linear-gradient(200deg, #e05976, #4784ff);
   z-index: 2;
 }
 .gradient-border-shadow::after {
@@ -103,17 +103,6 @@ body {
   box-sizing: inherit;
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0.5;
-}
-
 body {
   box-sizing: border-box;
   background-color: #f6f6f6;
@@ -166,6 +155,70 @@ li {
   margin-bottom: 2rem;
 }
 
+@media screen and (min-width: 981px) {
+  .animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+  .animation .point {
+    position: absolute;
+    border-radius: 50%;
+    transition-property: all;
+    transition-duration: 4s;
+    transition-timing-function: ease-out;
+  }
+  .animation .point1 {
+    top: 400px;
+    right: 30%;
+    width: 300px;
+    height: 300px;
+    background-color: #e05976;
+    filter: blur(100px);
+    animation: change_color 5s linear 1s infinite alternate, change_size 5s ease-in-out 1s infinite alternate, move 5s ease-in-out 1s infinite alternate;
+  }
+  .animation .point2 {
+    top: 400px;
+    right: 20%;
+    width: 500px;
+    height: 500px;
+    background-color: #4784ff;
+    filter: blur(100px);
+    animation: change_color 5s linear 1s infinite alternate-reverse, change_size 5s ease-in-out 1s infinite alternate-reverse, move 5s ease-in-out 1s infinite alternate-reverse;
+  }
+  @keyframes change_color {
+    0% {
+      background-color: #e05976;
+    }
+    100% {
+      background-color: #4784ff;
+    }
+  }
+  @keyframes change_size {
+    0% {
+      height: 100px;
+      filter: blur(50px);
+    }
+    100% {
+      height: 500px;
+      filter: blur(200px);
+    }
+  }
+  @keyframes move {
+    0% {
+      transform: rotate(0deg);
+      transform: translate(-5vw, -5vw);
+    }
+    100% {
+      transform: rotate(360deg);
+      transform: translate(5vw, 5vw);
+    }
+  }
+}
 .column-3 {
   display: flex;
 }
@@ -208,7 +261,7 @@ li {
   border-radius: 15px;
 }
 .bg-black .gradient-border-shadow::before {
-  background: linear-gradient(200deg, #e05976, #009fff);
+  background: linear-gradient(200deg, #e05976, #4784ff);
   z-index: 2;
 }
 .bg-black .gradient-border-shadow::after {
@@ -279,7 +332,7 @@ li {
   z-index: -1;
   margin: -2px; /* !importanté */
   border-radius: inherit; /* !importanté */
-  background: linear-gradient(200deg, #e05976, #009fff);
+  background: linear-gradient(200deg, #e05976, #4784ff);
 }
 
 .hamburger__checkbox {
@@ -470,7 +523,7 @@ li {
   z-index: -1;
 }
 .hero .container .image-wrapper::before {
-  background-color: #009fff;
+  background-color: #4784ff;
   left: -20px;
   top: 45px;
 }
@@ -610,7 +663,7 @@ li {
   border-radius: 15px;
 }
 .features .feature::before {
-  background: linear-gradient(200deg, #e05976, #009fff);
+  background: linear-gradient(200deg, #e05976, #4784ff);
   z-index: 12;
 }
 .features .feature::after {
@@ -891,7 +944,7 @@ li {
   border-radius: 15px;
 }
 .project-slider .slide.active::before {
-  background: linear-gradient(200deg, #e05976, #009fff);
+  background: linear-gradient(200deg, #e05976, #4784ff);
   z-index: 2;
 }
 .project-slider .slide.active::after {
@@ -923,7 +976,7 @@ li {
   border-radius: 15px;
 }
 .project-slider .swiper-slide-active .slide::before {
-  background: linear-gradient(200deg, #e05976, #009fff);
+  background: linear-gradient(200deg, #e05976, #4784ff);
   z-index: 2;
 }
 .project-slider .swiper-slide-active .slide::after {
@@ -1043,7 +1096,7 @@ li {
   z-index: -1;
 }
 .bg_image_hero .container .contact .image-wrapper::before {
-  background-color: #009fff;
+  background-color: #4784ff;
   left: -20px;
   top: 45px;
 }
@@ -1215,7 +1268,7 @@ li {
   border-radius: 15px;
 }
 .contactform .container .contactform-wrapper .gfield_label::before {
-  background: linear-gradient(200deg, #e05976, #009fff);
+  background: linear-gradient(200deg, #e05976, #4784ff);
   z-index: 2;
 }
 .contactform .container .contactform-wrapper .gfield_label::after {
@@ -1255,7 +1308,7 @@ li {
   z-index: -1;
   margin: -2px; /* !importanté */
   border-radius: inherit; /* !importanté */
-  background: linear-gradient(200deg, #e05976, #009fff);
+  background: linear-gradient(200deg, #e05976, #4784ff);
 }
 .contactform .container .contactform-wrapper .gform_footer::before {
   z-index: 0;

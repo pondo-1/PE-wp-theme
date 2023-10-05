@@ -5,6 +5,7 @@
  *
  */
 ?>
+<div id="animation" class="animation"><div id="point1" class="point1 point"></div><div id="point2" class="point2 point"></div></div>
 
 </main><!-- .site-main -->
 

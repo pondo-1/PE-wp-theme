@@ -42,8 +42,33 @@ const swiper = new Swiper(".swiperCarousel", {
   },
 });
 
-// Background Animation
-const rand = function (min, max) {
+//Backround Animation New
+
+const point1 = document.getElementById('point1');
+
+document.addEventListener('mousemove', (e) => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+
+  point1.style.top = mouseY-50 + "px"; //-50px : half of the height of the point
+  point1.style.left = mouseX-50 + "px";       
+
+});
+
+const point2 = document.getElementById('point2');
+
+document.addEventListener('mousemove', (e) => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+
+  point2.style.top = mouseY+50 + "px";
+  point2.style.left = mouseX+50 + "px";       
+
+});
+
+
+// Background Animation old 
+/* const rand = function (min, max) {
   return Math.random() * (max - min) + min;
 };
 
@@ -59,17 +84,17 @@ window.addEventListener("resize", function () {
   ctx = canvas.getContext("2d");
   ctx.globalCompositeOperation = "lighter";
 });
-let backgroundColors = ["#000", "#000"];
+let backgroundColors = ["#fff", "#fff"];
 let colors = [
-  ["#002aff", "#009ff2"],
-  ["#0054ff", "#27e49b"],
-  ["#202bc5", "#873dcc"],
+  ["#e05976", "#4784ff"],
+  ["#4784ff", "#e05976"],
+  ["#e05976", "#4784ff"],
 ];
-let count = 5;
-let blur = [12, 70];
-let radius = [1, 120];
+let count = 2;
+let blur = [90, 200];
+let radius = [60, 220];
 
-ctx.clearRect(0, 0, canvas.width, canvas.height);
+//ctx.clearRect(0, 0, canvas.width, canvas.height); // don't know
 ctx.globalCompositeOperation = "lighter";
 
 let grd = ctx.createLinearGradient(0, canvas.height, canvas.width, 0);
@@ -105,8 +130,12 @@ while (count--) {
   ctx.arc(x, y, thisRadius, 0, Math.PI * 2);
   ctx.closePath();
 
-  let directionX = Math.round(rand(-99, 99) / 100);
-  let directionY = Math.round(rand(-99, 99) / 100);
+
+  //Speed 
+//  let directionX = Math.round(rand(-99, 99) / 100);
+  let directionX = 1;
+//  let directionY = Math.round(rand(-99, 99) / 100);
+let directionY = 1;
 
   items.push({
     x: x,
@@ -180,4 +209,4 @@ function changeCanvas(timestamp) {
   window.requestAnimationFrame(changeCanvas);
 }
 
-window.requestAnimationFrame(changeCanvas);
+window.requestAnimationFrame(changeCanvas); */
