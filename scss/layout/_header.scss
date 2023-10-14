@@ -5,6 +5,7 @@
   top: 0;
   background-color: $c-bg-basic;
   z-index: 999;
+  box-shadow:  0 10px 15px #f6f6f6;
 
   .container {
     display: flex;
@@ -20,6 +21,8 @@
     margin-left: 0;
     z-index: 41;
   }
+
+  /*Full Width Menu Open*/
 
   .navigation {
    position: fixed;
@@ -57,6 +60,7 @@
      .main-menu {
       @include flex(column);
       justify-content: flex-start;
+      width: 75%;
 
 .main-menu-link {
   font-family: $ff-barlow-semi-condensed;
@@ -74,7 +78,37 @@
   top: auto;
 
   }
-}      
+}  
+
+.menu-item-has-children:last-child {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  width: 45%;
+
+  .main-menu-link {
+visibility: hidden;
+width: 75%;
+  }
+
+  .menu-item-depth-1 {
+
+  .sub-menu-link {
+text-decoration: none;
+font-size: 14px;
+line-height: 24px;
+max-width: 250px;
+  }
+  
+  }
+
+ .linkedin {
+    text-align: right;
+    }
+
+}
      }
 
     }

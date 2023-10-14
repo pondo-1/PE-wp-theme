@@ -10104,11 +10104,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import Lightbox from "../acf-blocks/image-gallery/lightbox";
 
 // import Swiper bundle with all modules installed //add .mjs required
 
 // import styles bundle
 
+
+// const lightbox = new Lightbox();
 const navigation = new _template_parts_navigation_navigation__WEBPACK_IMPORTED_MODULE_1__["default"]();
 const scrollup = new _template_parts_blog_scrollup__WEBPACK_IMPORTED_MODULE_2__["default"]();
 const swiper = new _node_modules_swiper_swiper_bundle_mjs__WEBPACK_IMPORTED_MODULE_3__["default"](".swiperCarousel", {

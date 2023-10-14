@@ -3,18 +3,25 @@
 
   .container {
     @include flex(row, unset);
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     row-gap: 25px;
     column-gap: 25px;
     position: relative;
     
+    .caption {
+      display: none;
+    }
 
+    .close {
+      display: none;
+    }
       
     .single-img {
       width: 363px;
       height: 242px;
       object-fit: none;
+    
     }
   }
 }

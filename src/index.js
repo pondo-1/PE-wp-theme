@@ -2,12 +2,14 @@ import "../scss/index.scss";
 
 import Navi from "../template-parts/navigation/navigation";
 import Scrollup from "../template-parts/blog/scrollup";
+// import Lightbox from "../acf-blocks/image-gallery/lightbox";
 
 // import Swiper bundle with all modules installed //add .mjs required
 import Swiper from "../node_modules/swiper/swiper-bundle.mjs";
 // import styles bundle
 import "swiper/css/bundle";
 
+// const lightbox = new Lightbox();
 const navigation = new Navi();
 const scrollup = new Scrollup();
 const swiper = new Swiper(".swiperCarousel", {
