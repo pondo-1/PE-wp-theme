@@ -47,6 +47,58 @@
             "placeholder": ""
         },
         {
+            "key": "field_652c286435bc2",
+            "label": "Oval Background Shape",
+            "name": "oval_background_shape",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg-oval": "bg-oval",
+                "bg-straight": "bg-straight"
+            },
+            "default_value": "bg-straight",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_652c28dd7d5be",
+            "label": "Oval Shape Variation",
+            "name": "oval_shape_variation",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "oval-var-1": "oval-var-1",
+                "oval-var-2": "oval-var-2",
+                "no-oval": "no-oval"
+            },
+            "default_value": "oval-var-1",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_64de2b6b2be3c",
             "label": "Order",
             "name": "order",
@@ -176,5 +228,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693388824
+    "modified": 1697394297
 }

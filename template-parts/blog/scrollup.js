@@ -1,3 +1,6 @@
+//Two example function from resp as reference
+
+
 export default class Scrollup {
   // 1. describe and create/initiate our object
   constructor() {

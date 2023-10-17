@@ -1,3 +1,8 @@
+// example function from resp as reference
+
+
+
+
 /**
  *  Shows the Navigation bar, if not accepted, yet.
  */
