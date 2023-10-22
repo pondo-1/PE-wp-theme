@@ -10,6 +10,7 @@
 @import "components/buttons";
 @import "components/hamburger";
 @import "components/animation";
+@import "components/background";
 
 @import "layout/header";
 @import "layout/footer";
@@ -24,3 +25,6 @@
 @import "../acf-blocks/one-column/one-column";
 @import "../acf-blocks/image-gallery/image-gallery";
 @import "../acf-blocks/contactform/contactform";
+
+// 3rd party package  
+// @import "../node_modules/simple-lightbox/dist/simpleLightbox.css";

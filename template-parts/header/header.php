@@ -20,22 +20,25 @@
             </a>
         </div>
         <div class="navigation">
-            <div class="navigation__background">&nbsp;</div>
-            <?php $menu_name = 'primary' ?>
-            <?php if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) : ?>
-            <?php getMenu($menu_name, 3, 'header-main-navi'); ?>
-            <?php else : ?>
-            <nav class="nav header-main-navi">
-                <ul class="main-menu">
-                    <li class="">No Menu for</li>
-                    <li class="">Header(main) Menu Postion</li>
-                    <li class=""><a href="/wp-admin/nav-menus.php" class="menu-link main-menu-link">To setting up</a>
-                    </li>
-                </ul>
-            </nav>
-            <?php endif ?>
+            <div class="nav_wrapper">
+                <div class="navigation__background">&nbsp;</div>
+                <?php $menu_name = 'primary' ?>
+                <?php if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) : ?>
+                <?php getMenu($menu_name, 3, 'header-main-navi'); ?>
+                <?php else : ?>
+                <nav class="nav header-main-navi">
+                    <ul class="main-menu">
+                        <li class="">No Menu for</li>
+                        <li class="">Header(main) Menu Postion</li>
+                        <li class=""><a href="/wp-admin/nav-menus.php" class="menu-link main-menu-link">To setting
+                                up</a>
+                        </li>
+                    </ul>
+                </nav>
+                <?php endif ?>
 
 
+            </div>
         </div>
     </div>
 </header>

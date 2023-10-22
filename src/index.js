@@ -1,26 +1,25 @@
 import "../scss/index.scss";
 
-import Animation from "../template-parts/animation"
+import Lightbox from "../acf-blocks/image-gallery/lightbox";
+import Animation from "../template-parts/animation";
+import Slide from "../acf-blocks/project-slider/slider";
 
-// import Swiper bundle with all modules installed //add .mjs required
+// 3rd party packages
+// Swiper bundle with all modules installed //add .mjs required
 import Swiper from "../node_modules/swiper/swiper-bundle.mjs";
-// import styles bundle
-import "swiper/css/bundle";
+import "swiper/css/bundle"; //style
+
+//https://simplelightbox.com/ https://dbrekalo.github.io/simpleLightbox/
+import SimpleLightbox from "../node_modules/simple-lightbox/dist/simpleLightbox";
+import "../node_modules/simple-lightbox/dist/simpleLightbox.css"; // style
 
 //Two example function from resp as reference
 // import Navi from "../template-parts/navigation/navigation";
 // import Scrollup from "../template-parts/blog/scrollup";
-
-
-// import Lightbox from "../acf-blocks/image-gallery/lightbox";
-
-
-
-
-// const lightbox = new Lightbox();
+var lightbox3 = new SimpleLightbox({ elements: ".Simplelightbox a" });
+const lightbox = new Lightbox();
 const animation = new Animation();
-//const navigation = new Navi();
-//const scrollup = new Scrollup();
+// const slide = new Slide();
 const swiper = new Swiper(".swiperCarousel", {
   direction: "horizontal",
   loop: true,
@@ -52,5 +51,5 @@ const swiper = new Swiper(".swiperCarousel", {
     prevEl: ".swiper-button-prev",
   },
 });
-
-
+//const navigation = new Navi();
+//const scrollup = new Scrollup();

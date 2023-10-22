@@ -1,14 +1,23 @@
 .footer {
-
   .container {
     padding-top: 5rem;
     padding-bottom: 3rem;
-    margin-bottom: 0;
+    margin: 0 auto;
     flex-wrap: wrap;
     row-gap: $row-gap--small;
+    max-width: 1140px;
   }
+
   .info,
   .navigation {
+    line-height: 30px;
+
+    .footer__logo-box {
+      filter: invert(1);
+      padding-bottom: 30px;
+    }
+
+
     &__heading {
       @include regular-fs(normal);
       font-weight: 500;
@@ -16,11 +25,13 @@
     }
     &__content {
       @include regular-fs(base);
-      a {
-        text-decoration: none;
-      }
-      ul li:before {
-        content: "- ";
+
+      .main-menu {
+        list-style-type: none;
+
+        a {
+          text-decoration: none;
+        }
       }
     }
     width: unset;

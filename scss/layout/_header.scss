@@ -5,7 +5,7 @@
   top: 0;
   background-color: $c-bg-basic;
   z-index: 999;
-  box-shadow:  0 10px 15px #f6f6f6;
+  box-shadow: 0 10px 15px #f6f6f6;
 
   .container {
     display: flex;
@@ -13,104 +13,103 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin: 2rem auto;
+    margin: 2rem auto 1rem auto;
+    max-width: 1140px;
   }
   &__logo-box {
     width: 50%;
     max-width: 207px;
     margin-left: 0;
     z-index: 41;
+    padding-top: 15px;
   }
 
   /*Full Width Menu Open*/
 
   .navigation {
-   position: fixed;
-   justify-content: flex-end;
-   left: 0;
-   width: 100vw;
-   height: 100vh;
-  top:0;
-  z-index: 40;
-  background-color: rgba(60, 60, 60, 0.95);
-    /*
-    position: absolute;
-    bottom: 0;
-    background-color: aquamarine;
-
-    
-    $nav-bg-width: 1920px;
-    $header-width: 1140px;
-    left: calc(($nav-bg-width - $header-width) / 2 * -1);
-    width: $nav-bg-width;
-    height: 3000px;
+    position: fixed;
+    justify-content: flex-end;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
     z-index: 40;
-    */
+    background-color: rgba(60, 60, 60, 0.95);
 
     display: none;
 
-    .header-main-navi {
-     max-width: 900px;
-     height: 100vh;
-     background-color: #fff;
-     width: 60%;
-     @include flex(column);
-     @include flex-center;
-
-     .main-menu {
-      @include flex(column);
-      justify-content: flex-start;
-      width: 75%;
-
-.main-menu-link {
-  font-family: $ff-barlow-semi-condensed;
-  font-size: 24px;
-  line-height: 58px;
-  text-decoration: none;
-  text-align: left;
-  @include gradient-border-feature;
-  padding: 0;
-  display: block;
-
-  &::before {
-    height: 1px;
-    bottom: 0;
-  top: auto;
-
-  }
-}  
-
-.menu-item-has-children:last-child {
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  max-width: 900px;
-  width: 45%;
-
-  .main-menu-link {
-visibility: hidden;
-width: 75%;
-  }
-
-  .menu-item-depth-1 {
-
-  .sub-menu-link {
-text-decoration: none;
-font-size: 14px;
-line-height: 24px;
-max-width: 250px;
-  }
-  
-  }
-
- .linkedin {
-    text-align: right;
+    .nav_wrapper {
+      max-width: 1140px;
+      background-color: $c-f-white;
+      width: 55%;
     }
 
-}
-     }
+    .header-main-navi {
+      max-width: 740px;
+      height: 100vh;
+      background-color: #fff;
+      @include flex(column);
+      @include flex-center;
 
+      .main-menu {
+        @include flex(column);
+        justify-content: flex-start;
+        list-style-type: none;
+        width: 75%;
+
+        .main-menu-link {
+          font-family: $ff-barlow-semi-condensed;
+          font-size: 24px;
+          line-height: 58px;
+          text-decoration: none;
+          text-align: left;
+          @include gradient-border-feature;
+          padding: 0;
+          display: block;
+
+          &::before {
+            height: 1px;
+            bottom: 0;
+            top: auto;
+          }
+        }
+
+        .menu-item-has-children:last-child {
+          position: fixed;
+          bottom: 0;
+          display: flex;
+          flex-direction: column;
+          max-width: 900px;
+          width: 45%;
+
+          .main-menu-link {
+            visibility: hidden;
+            width: 75%;
+          }
+
+          .sub-menu {
+          .menu-item-depth-1 {
+            
+              list-style-type: none;
+
+              &::marker {
+                color: $c-f-white;
+              }
+
+              .sub-menu-link {
+                text-decoration: none;
+                font-size: 14px;
+                line-height: 24px;
+                max-width: 250px;
+              }
+            }
+
+            .linkedin {
+              text-align: right;
+            }
+          }
+        }
+      }
     }
   }
   .hamburger__checkbox:checked ~ .navigation {
@@ -125,20 +124,10 @@ max-width: 250px;
 // Black Background/Artikel
 
 .single-artikel .header {
-  background-color: rgba(0,0,0,1);
-  
-  
+  background-color: rgba(0, 0, 0, 1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0);
+
   .header__logo-box {
-  visibility: hidden;
-  position: relative;
-  
-  &::before {
-    content: url("/asset/img/page-effect-logo-2023-white.svg");
-    position: absolute;
-    width: 100%;
-    display: block;
-    visibility: visible;
-  
-  }
+    filter: invert(1);
   }
 }
