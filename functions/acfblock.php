@@ -22,9 +22,6 @@ class ACFBlock
     array_push($allowedBlocks, "acf/{$this->name}");
   }
 }
-new ACFblock("textbox");
-new ACFblock("imagetext");
-
 new ACFblock("hero");
 new ACFblock("image-text");
 new ACFblock("features");
@@ -35,4 +32,3 @@ new ACFblock("bg-image-hero");
 new ACFblock("one-column");
 new ACFblock("image-gallery");
 new ACFblock("contactform");
-
