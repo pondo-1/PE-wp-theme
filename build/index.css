@@ -281,7 +281,7 @@ a {
     background-color: #e05976;
     filter: blur(0px);
     opacity: 0.6;
-    animation: change_color 5s linear 1s infinite alternate, change_size 5s ease-in-out 1s infinite alternate, move 5s ease-in-out 1s infinite alternate;
+    animation: change_color 5s linear 1s infinite alternate, change_size 5s ease-in-out 1s infinite alternate, move 5s ease-in-out 5s infinite alternate;
   }
   .animation .point2 {
     top: 400px;
@@ -291,7 +291,7 @@ a {
     opacity: 0.6;
     background-color: rgba(49, 61, 236, 0.8392156863);
     filter: blur(100px);
-    animation: change_color 5s linear 1s infinite alternate-reverse, change_size 5s ease-in-out 1s infinite alternate-reverse, move 5s ease-in-out 1s infinite alternate-reverse;
+    animation: change_color 5s linear 1s infinite alternate-reverse, change_size 5s ease-in-out 1s infinite alternate-reverse, move 5s ease-in-out 5s infinite alternate-reverse;
   }
   @keyframes change_color {
     0% {

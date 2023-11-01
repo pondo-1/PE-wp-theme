@@ -29,7 +29,7 @@
       opacity: 0.6;
       animation: change_color 5s linear 1s infinite alternate,
         change_size 5s ease-in-out 1s infinite alternate,
-        move 5s ease-in-out 1s infinite alternate;
+        move 5s ease-in-out 5s infinite alternate;
     }
 
     .point2 {
@@ -42,7 +42,7 @@
       filter: blur(100px);
       animation: change_color 5s linear 1s infinite alternate-reverse,
         change_size 5s ease-in-out 1s infinite alternate-reverse,
-        move 5s ease-in-out 1s infinite alternate-reverse;
+        move 5s ease-in-out 5s infinite alternate-reverse;
     }
 
     @keyframes change_color {
