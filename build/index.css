@@ -6,6 +6,13 @@
   color: #e05976;
 }
 
+/* @mixin gradient-border-btn($bg-color: inherit) {
+//   position: relative;
+   box-sizing: border-box;
+
+   $border: 2px;
+   background-color: $bg-color;
+   background-clip: padding-box; /* !importanté */
 .gradient-border-shadow {
   position: relative;
 }
@@ -172,34 +179,39 @@ a {
 }
 
 .btn {
+  position: relative;
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
   padding: 0.55em 2.2em;
   width: -moz-fit-content;
   width: fit-content;
+  margin: 2px;
   cursor: pointer;
 }
-.btn--empty {
-  background-color: #f6f6f6;
-  position: relative;
-  box-sizing: border-box;
-  background-color: #f6f6f6;
-  background-clip: padding-box; /* !importanté */
-  border: solid 2px transparent; /* !importanté */
-  border-radius: 15px;
-}
-.btn--empty:before {
-  content: "";
+.btn::before,
+.btn:after {
   position: absolute;
-  top: 0;
-  left: 0;
+  content: "";
   width: 100%;
   height: 100%;
+  border-radius: 5px;
+}
+
+.btn::before {
+  background: linear-gradient(200deg, rgba(49, 61, 236, 0.8392156863), #e05976);
+  z-index: -2;
+  padding: 4px;
+  top: -4px;
+  left: -4px;
+  box-sizing: content-box;
+}
+
+.btn:after {
+  background-color: #f6f6f6;
   z-index: -1;
-  margin: -2px; /* !importanté */
-  border-radius: inherit; /* !importanté */
-  background: linear-gradient(200deg, #e05976, rgba(49, 61, 236, 0.8392156863));
+  top: 0;
+  left: 0;
 }
 
 .hamburger__checkbox {
@@ -1400,64 +1412,12 @@ a {
   order: 2;
   padding-top: 5px;
   margin-top: 5px;
-  position: relative;
-}
-.contactform .container .contactform-wrapper .gfield_label > * {
-  position: relative;
-  z-index: 5;
-}
-.contactform .container .contactform-wrapper .gfield_label::after, .contactform .container .contactform-wrapper .gfield_label::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-}
-.contactform .container .contactform-wrapper .gfield_label::before {
-  background: linear-gradient(200deg, #e05976, rgba(49, 61, 236, 0.8392156863));
-  z-index: 2;
-}
-.contactform .container .contactform-wrapper .gfield_label::after {
-  z-index: 3;
-  background-color: inherit;
-  background-clip: padding-box; /* !importanté */
-  border: solid 3px transparent; /* !importanté */
-  box-sizing: border-box;
 }
 .contactform .container .contactform-wrapper .gfield_label::before {
   height: 1px;
 }
 .contactform .container .contactform-wrapper .gform_footer {
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  padding: 0.55em 2.2em;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  background-color: #f6f6f6;
-  position: relative;
-  box-sizing: border-box;
-  background-color: inherit;
-  background-clip: padding-box; /* !importanté */
-  border: solid 2px transparent; /* !importanté */
-  border-radius: 15px;
   padding: 0;
-}
-.contactform .container .contactform-wrapper .gform_footer:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  margin: -2px; /* !importanté */
-  border-radius: inherit; /* !importanté */
-  background: linear-gradient(200deg, #e05976, rgba(49, 61, 236, 0.8392156863));
 }
 .contactform .container .contactform-wrapper .gform_footer::before {
   z-index: 0;
@@ -1466,14 +1426,6 @@ a {
   height: 100%;
   font-size: 21px;
   font-weight: 600;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  padding: 0.55em 2.2em;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  background-color: #f6f6f6;
 }
 
 @media screen and (max-width: 900px) {

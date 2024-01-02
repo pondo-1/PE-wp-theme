@@ -55,7 +55,7 @@
         order:2;
         padding-top: 5px;
         margin-top: 5px;
-        @include gradient-border-feature;
+    //    @include gradient-border-feature;
         
         &::before {
           height: 1px;
@@ -63,8 +63,8 @@
       }
       
       .gform_footer {
-        @include btn;
-        @include gradient-border-btn;
+  //      @include btn;
+   //     @include gradient-border-btn;
         padding: 0;
         
 
@@ -76,7 +76,7 @@ z-index: 0;
           height: 100%;
           font-size: 21px;
           font-weight: 600;
-          @include btn;
+//          @include btn;
         }
       }
     
