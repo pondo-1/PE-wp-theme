@@ -42,7 +42,6 @@
 
 @mixin gradient-border-feature($bg-color: inherit, $current-z-index: 1) {
   $border: 3px;
-
   position: relative;
 
   & > * {

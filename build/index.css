@@ -195,16 +195,16 @@ a {
   content: "";
   width: 100%;
   height: 100%;
-  border-radius: 5px;
 }
 
 .btn::before {
-  background: linear-gradient(200deg, rgba(49, 61, 236, 0.8392156863), #e05976);
+  background: linear-gradient(200deg, #e05976, rgba(49, 61, 236, 0.8392156863));
   z-index: -2;
-  padding: 4px;
-  top: -4px;
-  left: -4px;
+  padding: 3px;
+  top: -3px;
+  left: -3px;
   box-sizing: content-box;
+  border-radius: 15px;
 }
 
 .btn:after {
@@ -212,6 +212,7 @@ a {
   z-index: -1;
   top: 0;
   left: 0;
+  border-radius: 12px;
 }
 
 .hamburger__checkbox {
@@ -881,7 +882,7 @@ a {
   height: 100%;
   position: absolute;
   right: -2px;
-  background: linear-gradient(200deg, #e05976, #9a60c2);
+  background: linear-gradient(200deg, #e05976, rgba(49, 61, 236, 0.8392156863));
 }
 @media screen and (max-width: 600px) {
   .blocks li:not(:last-child)::after {
@@ -916,7 +917,7 @@ a {
   /* Fallback: Set a background color. */
   background-color: #e05976;
   /* Create the gradient. */
-  background-image: linear-gradient(200deg, #e05976, #9a60c2);
+  background-image: linear-gradient(200deg, #e05976, rgba(49, 61, 236, 0.8392156863));
   /* Set the background size and repeat properties. */
   background-size: 100%;
   background-repeat: repeat;
@@ -971,7 +972,7 @@ a {
   left: 0;
   height: 2px;
   background-color: yellow;
-  background: linear-gradient(200deg, #e05976, #9a60c2);
+  background: linear-gradient(200deg, #e05976, rgba(49, 61, 236, 0.8392156863));
 }
 @media screen and (max-width: 900px) {
   .text-features .container {
@@ -1114,9 +1115,21 @@ a {
 .project-slider .swiper-slide [class^=swiper-button-] {
   top: calc(50% - var(--add-bottom) / 2);
 }
+.project-slider .swiper-slide::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: red;
+  content: "";
+  margin: 50px;
+  padding: 4px;
+  box-sizing: content-box;
+  left: -4px;
+  top: -4px;
+}
 .project-slider .swiper-pagination {
   border-radius: 100%;
-  --swiper-pagination-color: #e05976;
+  --swiper-pagination-color: red;
   --swiper-pagination-bullet-horizontal-gap: 5px;
 }
 .project-slider .swiper-pagination-bullet {
