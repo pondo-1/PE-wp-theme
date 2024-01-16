@@ -7,9 +7,14 @@
   box-sizing: inherit;
 }
 
+*:focus:not(:focus-visible) {
+  outline: none
+}
 
-
-
+*:focus-visible {
+  outline: 2px dashed currentColor;
+  outline-offset: 2px;
+}
 
 body {
   box-sizing: border-box;
@@ -19,6 +24,23 @@ body {
 a {
   color: inherit;
 }
+
+a:hover,
+.hamburger__icon:hover,
+.swiper-button-next:hover,
+.swiper-button-prev:hover,
+.swiper-pagination-bullet:hover {
+opacity: 0.75;  
+ }
+
+a:active,
+.hamburger__icon:hover,
+.swiper-button-next:active,
+.swiper-button-prev:active,
+.swiper-pagination-bullet:active {
+opacity: 1;  
+ }
+
 //dev perpose
 // section.module {
 //   border: solid 1px red;
