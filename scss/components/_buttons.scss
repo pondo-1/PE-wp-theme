@@ -15,7 +15,7 @@
 }
 
 .btn::before,
-.btn:after {
+.btn::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -32,7 +32,7 @@
   border-radius: 15px;
 }
 
-.btn:after {
+.btn::after {
   background-color: $c-bg-basic;
 z-index: -1;
 //transform: scale(0.93,-0.8);
@@ -40,4 +40,9 @@ z-index: -1;
 top: 0;
   left: 0;
   border-radius: 12px;
+}
+
+.btn:hover::after {
+  background-color: none;
+z-index: -1;
 }
