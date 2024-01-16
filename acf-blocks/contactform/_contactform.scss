@@ -1,9 +1,8 @@
 .contactform {
-
   .container {
     @include flex(row, unset);
-    justify-content: space-between;   
-   
+    justify-content: space-between;
+
     .gform_required_legend {
       display: none;
     }
@@ -16,7 +15,7 @@
       font-weight: 600;
 
       .gfield {
-        @include flex(column,unset);
+        @include flex(column, unset);
         padding-bottom: 86px;
       }
 
@@ -24,7 +23,7 @@
         order: 1;
         overflow: visible;
         position: relative;
-      
+
         input,
         textarea {
           border: none;
@@ -33,70 +32,66 @@
           width: 100%;
           display: block;
           padding: 5px;
-        
+
           &:hover,
           &:active,
           &:focus {
-          outline: 2px solid $c-f-red;
+            outline: 2px solid $c-f-red;
           }
         }
 
-          .ginput_counter {
-            opacity: 0.5;
-            font-weight: normal;
-            position: absolute;
-            bottom: -35px;
-            right: 0;
-            font-size: 18px;
-          }
-    }
+        .ginput_counter {
+          opacity: 0.5;
+          font-weight: normal;
+          position: absolute;
+          bottom: -35px;
+          right: 0;
+          font-size: 18px;
+        }
+      }
 
       .gfield_label {
-        order:2;
+        order: 2;
         padding-top: 5px;
         margin-top: 5px;
-    //    @include gradient-border-feature;
-        
+        //    @include gradient-border-feature;
+
         &::before {
           height: 1px;
         }
       }
-      
+
       .gform_footer {
-  //      @include btn;
-   //     @include gradient-border-btn;
+        //      @include btn;
+        //     @include gradient-border-btn;
         padding: 0;
-        
 
         &::before {
-z-index: 0;
+          z-index: 0;
         }
 
         .btn--empty {
           height: 100%;
           font-size: 21px;
           font-weight: 600;
-//          @include btn;
+          //          @include btn;
         }
       }
-    
     }
   }
-}
-  
-@media screen and (max-width: $bp-tablet) {
-  .container {
-    @include flex(column, $row-gap--small);
-    .image-wrapper {
-      order: 1;
-      max-width: 380px;
-      width: 60vw;
-      margin-left: auto;
-      img {
-        transform: translateX(10%);
+
+  @media screen and (max-width: $bp-tablet) {
+    .container {
+      @include flex(column, $row-gap--small);
+      .image-wrapper {
+        order: 1;
+        max-width: 380px;
+        width: 60vw;
+        margin-left: auto;
+        img {
+          transform: translateX(10%);
+        }
       }
     }
-    
   }
 }
-

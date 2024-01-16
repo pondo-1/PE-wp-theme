@@ -23,7 +23,7 @@
       object-fit: none;
     }
   }
-}
+
 
 //when lightbox active
 .popped {
@@ -69,19 +69,20 @@
       object-fit: none;
     }
   }
-}
 
-@media screen and (max-width: $bp-tablet) {
-  .container {
-    @include flex(column, $row-gap--small);
-    .image-wrapper {
-      order: 1;
-      max-width: 380px;
-      width: 60vw;
-      margin-left: auto;
-      img {
-        transform: translateX(10%);
+  @media screen and (max-width: $bp-tablet) {
+    .container {
+      @include flex(column, $row-gap--small);
+      .image-wrapper {
+        order: 1;
+        max-width: 380px;
+        width: 60vw;
+        margin-left: auto;
+        img {
+          transform: translateX(10%);
+        }
       }
     }
   }
+}
 }

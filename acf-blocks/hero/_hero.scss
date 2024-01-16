@@ -11,6 +11,10 @@
     .image-wrapper {
       @include contact-img-color;
       width: 380px;
+      height: fit-content;
+      @media screen and (max-width: 1080px) {
+      right: -8vw;
+      }
     }
   }
   @media screen and (max-width: $bp-tablet) {
@@ -19,8 +23,13 @@
       .image-wrapper {
         order: 1;
         max-width: 380px;
-        width: 60vw;
+        width: 60%;
         margin-left: auto;
+        @media screen and (max-width: 680px) {
+          width: 250px;
+          height: fit-content;
+          max-width: 250px;  
+        }
         img {
           transform: translateX(10%);
         }

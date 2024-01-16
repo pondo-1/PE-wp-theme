@@ -34,8 +34,14 @@ background-color: transparent;
     background-color: $c-bg-black;
     margin-left: -30vw;
     margin-right: -30vw;
+    transform: rotate(180deg);
 z-index: -1;
-transform: rotate(180deg)
+@media screen and (max-width: $bp-tablet) {
+  width: 300vw;
+  margin-left: -100vw;
+    margin-right: -100vw;
+    transform: rotate(198deg);
+}
 }
 
 &.oval-var-1::before {
@@ -50,7 +56,15 @@ transform: rotate(180deg)
     border-top-right-radius: 50%;
     border-bottom-right-radius: 57%;
     border-bottom-left-radius: 30%;
-  }
+
+    @media screen and (max-width: $bp-tablet) {
+
+    border-top-left-radius: 52%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 46%;
+  border-bottom-left-radius: 30%;
+    }
+}
 }
 }
 

@@ -6,6 +6,10 @@
     flex-wrap: wrap;
     row-gap: $row-gap--small;
     max-width: 1140px;
+    @media screen and (max-width: 1250px) {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
   }
 
   .info,

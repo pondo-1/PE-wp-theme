@@ -110,24 +110,38 @@
   &::before,
   &::after {
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 380px;
+    height: 380px;
     border-radius: 50%;
     content: "";
     z-index: -1;
+    @media screen and (max-width: 680px) {
+      width: 250px;
+      height: 250px;
+      max-width: 250px;
+      max-height: 250px;
+
+    }
   }
 
   &::before {
     background-color: $sec-violett;
-    left: -20px;
-    top: 45px;
+    left: -4%;
+    bottom: -4%;
+    @media screen and (max-width: 900px) {
+    left: 7%;
+    }
   }
 
   &::after {
     background-color: $c-f-red;
-    filter: blur(8px);
-    left: 15px;
-    top: 8px;
+    filter: blur(15px);
+    right: -3%;
+    top: -3%;
+    @media screen and (max-width: 900px) {
+    right: -14%;
+    top: -1%
+    }
   }
 }
 

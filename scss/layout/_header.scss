@@ -15,7 +15,11 @@
     position: relative;
     margin: 2rem auto 1rem auto;
     max-width: 1140px;
+    @media screen and (max-width: 1250px) {
+      padding: 0 5%;
+    }
   }
+
   &__logo-box {
     width: 50%;
     max-width: 207px;
