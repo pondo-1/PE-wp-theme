@@ -22,51 +22,51 @@ position: relative;
 padding-top: 200px;
 padding-bottom: 200px;
 background-color: transparent;
+height: 100%;
+overflow: visible;
+@media screen and (max-width: $bp-tablet) {
+  padding-top: 100px;
+}
 
 &::before {
     content:"";
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 160vw;
     height: 100%;
     overflow: hidden;
     background-color: $c-bg-black;
-    margin-left: -30vw;
-    margin-right: -30vw;
-    transform: rotate(180deg);
 z-index: -1;
-@media screen and (max-width: $bp-tablet) {
-  width: 300vw;
-  margin-left: -100vw;
-    margin-right: -100vw;
-    transform: rotate(198deg);
+border-radius: 50%;
 }
 }
-
-&.oval-var-1::before {
-    border-top-left-radius: 34%;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 30%;
-    border-bottom-left-radius: 57%;
-  }
+   
   
- &.oval-var-2::before {
-    border-top-left-radius: 68%;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 57%;
-    border-bottom-left-radius: 30%;
-
+  
+  &.oval-var-2::before  {
+    width: 200vw;
+    left: -65vw;
+    top: 1.5vh;
     @media screen and (max-width: $bp-tablet) {
-
-    border-top-left-radius: 52%;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 46%;
-  border-bottom-left-radius: 30%;
+      width: 520vw;
+      left: -200vw;
+  
     }
+  }
+
+  &.oval-var-1::before  {
+    width: 300vw;
+    left: -50vw;
+    top: -5vh;
+    @media screen and (max-width: $bp-tablet) {
+      width: 620vw;
+      left: -200vw;
+  
+    }
+  }
 }
-}
-}
+    
+
+
+
 
 
   
