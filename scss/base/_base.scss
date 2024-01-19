@@ -82,12 +82,6 @@ li {
   list-style-type: none;
 }
 
-.bg-black {
-  background-color: $c-bg-black;
-  .btn--empty {
-    background-color: $c-bg-black;
-  }
-}
 
 .text-box {
   p:not(:last-child) {

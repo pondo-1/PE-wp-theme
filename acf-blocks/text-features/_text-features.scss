@@ -43,7 +43,7 @@
       width: 100%;
       @include flex(row, $column-gap);
       align-items: center;
-      padding: 20px 30px;
+      padding: 20px 0;
       &__icon {
         flex-shrink: 0;
         display: flex;

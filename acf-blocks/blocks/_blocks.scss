@@ -23,6 +23,9 @@
     line-height: 1.33;
     position: relative;
     margin-bottom: 2.5em;
+    @media screen and (max-width: $bp-smallfont) {
+      padding: 0 10px;
+    }
 
     &:not(:last-child)::after {
       content: "";

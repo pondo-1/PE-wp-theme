@@ -84,6 +84,9 @@
   }
   .swiper-button-next {
     right: calc(50% - 150px);
+    @media screen and (max-width: $bp-tablet) {
+    overflow: visible;
+    }
   }
   .swiper-button-prev {
     left: calc(50% - 150px);
