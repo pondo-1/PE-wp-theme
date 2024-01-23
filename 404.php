@@ -11,5 +11,9 @@
 ?>
 
 <?php get_header(); ?>
-<h2>Error 404</h2>
+<div class="container">
+    <h1>:-(</br>Hier gibt es leider nicht zu sehen </h1>
+    <p>Die aufgerufene Seite exisistiert leider nicht (mehr).</p>
+    <p>Hier gelangen Sie zur <a href="/">Startseite</a></p>
+</div>
 <?php get_footer(); ?>

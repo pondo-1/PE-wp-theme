@@ -179,6 +179,28 @@ a:active,
   margin-bottom: 2rem;
 }
 
+/* 404 Template */
+.error404 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.error404 .main {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  min-height: 50vh;
+}
+
+.error404 h1 {
+  padding-bottom: 1em;
+}
+
+.error404 .main p {
+  font-size: 26px;
+}
+
 .column-3 {
   display: flex;
 }
@@ -220,7 +242,6 @@ a:active,
   content: "";
   width: 100%;
   height: 100%;
-  border-radius: 15px;
 }
 
 .btn::before {
@@ -230,6 +251,7 @@ a:active,
   top: -3px;
   left: -3px;
   box-sizing: content-box;
+  border-radius: 15px;
 }
 
 .btn::before {
@@ -242,12 +264,11 @@ a:active,
   top: 0;
   left: 0;
   border-radius: 12px;
-  transform: scaleX(1);
-  transform-origin: 100% 50%;
+  transform: scale(1);
+  transform-origin: 50%;
   transition-property: transform;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
-  border-radius: 15px;
 }
 
 .bg-black .btn::after {
@@ -257,7 +278,8 @@ a:active,
 .btn:hover::after,
 .btn:active::after {
   z-index: -1;
-  transform: scaleX(0);
+  transform: scale(95%, 80%);
+  border-radius: 12px;
 }
 
 .btn:active {
@@ -336,20 +358,20 @@ a:active,
     transition-timing-function: ease-out;
   }
   .animation .point1 {
+    filter: blur(300px);
     width: 200px;
     height: 200px;
     background-color: #e05976;
-    filter: blur(0px);
-    opacity: 0.4;
-    animation: change_color 5s linear 1s infinite alternate, change_size 5s ease-in-out 1s infinite alternate, move 30s ease-in-out 5s infinite alternate;
+    opacity: 0.3;
+    animation: change_color 5s linear 1s infinite alternate, change_size 5s ease-in-out 1s infinite alternate, move 10s ease-in-out 5s infinite alternate;
   }
   .animation .point2 {
+    filter: blur(300px);
     width: 200px;
     height: 200px;
-    opacity: 0.4;
+    opacity: 0.3;
     background-color: rgba(49, 61, 236, 0.8392156863);
-    filter: blur(100px);
-    animation: change_color 5s linear 1s infinite alternate-reverse, change_size 10s ease-in-out 1s infinite alternate-reverse, move 30s ease-in-out 1s infinite alternate-reverse;
+    animation: change_color 5s linear 1s infinite alternate-reverse, change_size 10s ease-in-out 1s infinite alternate-reverse, move 10s ease-in-out 1s infinite alternate-reverse;
   }
   @keyframes change_color {
     0% {
@@ -368,15 +390,15 @@ a:active,
     100% {
       height: 700px;
       width: 200px;
-      filter: blur(200px);
+      filter: blur(100px);
     }
   }
   @keyframes move {
     0% {
-      transform: rotate(0deg);
+      transform: rotate(0deg) translate(-300) rotate(0);
     }
     100% {
-      transform: rotate(360deg);
+      transform: rotate(360deg) translate(-300px) rotate(-360deg);
     }
   }
 }

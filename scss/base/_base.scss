@@ -90,4 +90,25 @@ li {
 }
 }
 
+/* 404 Template */
 
+.error404 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  }
+
+.error404 .main {
+padding-top: 15vh;
+padding-bottom: 15vh;
+min-height: 50vh;
+}
+
+.error404 h1 {
+padding-bottom: 1em;
+  }
+
+  .error404 .main p {
+    font-size: 26px;
+      }
