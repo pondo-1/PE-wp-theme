@@ -94,9 +94,8 @@ li {
 
 .error404 {
   min-height: 100vh;
-  display: flex;
+  @include flex(column);
   justify-content: space-between;
-  flex-direction: column;
   }
 
 .error404 .main {

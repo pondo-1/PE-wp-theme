@@ -183,8 +183,9 @@ a:active,
 .error404 {
   min-height: 100vh;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  row-gap: unset;
+  justify-content: space-between;
 }
 
 .error404 .main {
@@ -699,8 +700,9 @@ a:active,
   text-decoration: none;
 }
 .footer .info {
-  min-width: 400px;
+  min-width: 300px;
   width: 50%;
+  max-width: 100vw;
 }
 .footer .left {
   margin-right: 10%;
