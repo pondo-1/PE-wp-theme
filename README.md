@@ -1,2 +1,1 @@
-# Wp-theme-blueprint
-Wp-theme-blueprint
+Theme for Page-effect.com
