@@ -39,9 +39,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+    // background-color: rgba(153, 49, 49, 0);
     z-index: 9;
-
+    
     .caption {
       display: flex;
       color: $c-f-white;
@@ -67,7 +67,9 @@
       max-width: 1920px;
       height: auto;
       object-fit: none;
+      
     }
+    
   }
 
   @media screen and (max-width: $bp-tablet) {

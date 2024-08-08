@@ -1,73 +1,73 @@
 .image-text {
-  .container {
-    @include flex(row, $column-gap);
-    align-items: center;
-  }
-
-  .text-wrapper,
-  .image-wrapper {
-    width: calc(50% - ($column-gap / 2));
-    height: fit-content;
-  }
-  &.image-first {
-    .image-wrapper {
-      order: 1;
-    }
-    .text-wrapper {
-      order: 2;
-    }
-  }
-  &.text-first {
-    .text-wrapper {
-      order: 1;
-    }
-    .image-wrapper {
-      order: 2;
-    }
-  }
-
-  .image-wrapper {
-    position: relative;
-    .image {
-      display: block;
-      width: 84%;
-      aspect-ratio: 6/4;
-      height: auto;
-      img {
-        border-radius: $border-radius;
-      }
-    }
-    picture {
-      position: absolute;
-      z-index: 10;
-    }
-  }
-  .text-wrapper {
-    @include flex(column);
-  }
-
-  @media screen and (max-width: $bp-tablet) {
     .container {
-      @include flex(column, $row-gap--big);
+      @include flex(row, $column-gap);
+      align-items: center;
+    }
+  
+    .text-wrapper,
+    .image-wrapper {
+      width: calc(50% - ($column-gap / 2));
+      height: fit-content;
+    }
+    &.image-first {
       .image-wrapper {
-        margin: auto;
-        transform: translateX(3vw);
-        width: unset;
-        .image {
-          width: 448px;
-        }
-        .gradient-border-shadow::after,
-        .gradient-border-shadow::before {
-          top: 12%;
-          left: -27%;
-        }
-        // bottom margin = size of gradient-border shadow
-        $bottom-overlay: calc(448px * 2 / 3 * 0.12);
-        margin-bottom: calc($bottom-overlay);
+        order: 1;
       }
       .text-wrapper {
-        width: 100%;
+        order: 2;
+      }
+    }
+    &.text-first {
+      .text-wrapper {
+        order: 1;
+      }
+      .image-wrapper {
+        order: 2;
+      }
+    }
+  
+    .image-wrapper {
+      position: relative;
+      .image {
+        display: block;
+        width: 84%;
+        aspect-ratio: 6/4;
+        height: auto;
+        img {
+          border-radius: $border-radius;
+        }
+      }
+      picture {
+        position: absolute;
+        z-index: 10;
+      }
+    }
+    .text-wrapper {
+      @include flex(column);
+    }
+  
+    @media screen and (max-width: $bp-tablet) {
+      .container {
+        @include flex(column, $row-gap--big);
+        .image-wrapper {
+          margin: auto;
+          transform: translateX(3vw);
+          width: unset;
+          .image {
+            width: 448px;
+          }
+          .gradient-border-shadow::after,
+          .gradient-border-shadow::before {
+            top: 12%;
+            left: -27%;
+          }
+          // bottom margin = size of gradient-border shadow
+          $bottom-overlay: calc(448px * 2 / 3 * 0.12);
+          margin-bottom: calc($bottom-overlay);
+        }
+        .text-wrapper {
+          width: 100%;
+        }
       }
     }
   }
-}

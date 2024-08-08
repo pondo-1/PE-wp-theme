@@ -145,4 +145,51 @@
   }
 }
 
+@mixin contact-img-color-artikel {
+  
+  position: relative;
+  
+  &::before,
+  &::after {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    content: "";
+    z-index: -1;
+    @media screen and (max-width: 900px) {
+      width: 212px;
+      height: 212px;
+      max-width: 250px;
+      max-height: 250px;
+      
+    }
+  }
+
+  &::before {
+    background-color: $sec-violett;
+    left: -4%;
+    bottom: -4%;
+    @media screen and (max-width: 900px) {
+    left: 21%;
+    bottom: -6%;
+    }
+  }
+
+  &::after {
+    background-color: $c-f-red;
+    filter: blur(15px);
+    right: -3%;
+    top: -3%;
+    @media screen and (max-width: 900px) {
+    width: 220px;
+    height: 220px;
+    right: 17%;
+    top: -3%;
+    
+    }
+  }
+}
+
+
 
