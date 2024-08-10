@@ -1,6 +1,6 @@
 .image-gallery {
   padding-bottom: 160px;
-
+  @media screen and (min-width: $bp-tablet) {
   .container {
     @include flex(row, unset);
     justify-content: flex-start;
@@ -22,6 +22,12 @@
       height: 242px;
       object-fit: none;
     }
+  }
+  .text_wrapper {
+    padding-top: 15%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
   }
 
 
@@ -71,18 +77,16 @@
     }
     
   }
-
+}
   @media screen and (max-width: $bp-tablet) {
     .container {
       @include flex(column, $row-gap--small);
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
       .image-wrapper {
-        order: 1;
-        max-width: 380px;
-        width: 60vw;
-        margin-left: auto;
-        img {
-          transform: translateX(10%);
-        }
+        display: inline-block;
+        margin-right: 10px;
       }
     }
   }

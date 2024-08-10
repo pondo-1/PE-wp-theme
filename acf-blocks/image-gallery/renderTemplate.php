@@ -13,8 +13,13 @@
         </div>
         <?php endforeach; ?>
         <?php endif; ?>
-
     </div>
+        <?php $image_gallery_text = get_field('image_gallery_text'); ?>
+        <?php if ($image_gallery_text): ?>
+            <div class="text_wrapper">
+                <?php the_field( 'image_gallery_text' ); ?>
+            </div>
+        <?php endif; ?>
 
 </section>
 
@@ -31,7 +36,14 @@
         </a>
         <?php endforeach; ?>
         <?php endif; ?>
-
     </div>
+        <?php $image_gallery_text = get_field('image_gallery_text'); ?>
+        <?php if ($image_gallery_text): ?>
+            <div class="text_wrapper">
+                <?php the_field( 'image_gallery_text' ); ?>
+            </div>
+        <?php endif; ?>
+
+
 
 </section>
