@@ -79,10 +79,12 @@
     top: 15%;
     left: 15%;
   }
+
 }
 
 .gradient-border-shadow {
   @include gradient-border-shadow($c-bg-basic);
+  
 }
 
 @mixin gradient-text {

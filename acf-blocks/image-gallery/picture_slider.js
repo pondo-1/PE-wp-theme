@@ -2,14 +2,15 @@ class PictureSlider {
     constructor() {
         console.log("constructor test");
         this.currentIndex = 0;
-        this.gallery = document.querySelector('.gallery'); // Korrigiert: Wählen Sie den Galerie-Container aus
+        this.gallery = document.querySelector('.gallery-wrapper'); // Korrigiert: Wählen Sie den Galerie-Container aus
         this.totalImages = this.gallery.children.length;
         this.initEvents();
+        this.changeCircleColor(0)
     }
 
     initEvents() {
-        document.querySelector('.button.left').addEventListener('click', () => this.moveLeft());
-        document.querySelector('.button.right').addEventListener('click', () => this.moveRight());
+        document.querySelector('.button-slider.left').addEventListener('click', () => this.moveLeft());
+        document.querySelector('.button-slider.right').addEventListener('click', () => this.moveRight());
     }
 
     moveLeft() {
@@ -17,6 +18,8 @@ class PictureSlider {
         if (this.currentIndex > 0) {
             this.currentIndex--;
             this.updateGallery();
+            
+            this.changeCircleColor(this.currentIndex);
         }
     }
 
@@ -25,6 +28,22 @@ class PictureSlider {
         if (this.currentIndex < this.totalImages - 1) {
             this.currentIndex++;
             this.updateGallery();
+           
+            this.changeCircleColor(this.currentIndex);
+        }
+    }
+    changeCircleColor(id) {
+        var circle = document.getElementById('circle_' + (id +1));
+        if (circle) {
+            circle.style.backgroundColor = 'red';
+        }
+        var circle = document.getElementById('circle_' + id);
+        if (circle) {
+            circle.style.backgroundColor = 'black';
+        }
+        var circle = document.getElementById('circle_' + (id +2));
+        if (circle) {
+            circle.style.backgroundColor = 'black';
         }
     }
 
