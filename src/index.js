@@ -3,7 +3,7 @@ import "../scss/index.scss";
 import Lightbox from "../acf-blocks/image-gallery/lightbox";
 import Animation from "../template-parts/animation";
 import Slide from "../acf-blocks/project-slider/slider";
-
+import PictureSlider from "../acf-blocks/image-gallery/picture_slider"
 // 3rd party packages
 // Swiper bundle with all modules installed //add .mjs required
 import Swiper from "../node_modules/swiper/swiper-bundle.mjs";
@@ -19,6 +19,7 @@ import "../node_modules/simple-lightbox/dist/simpleLightbox.css"; // style
 var lightbox3 = new SimpleLightbox({ elements: ".Simplelightbox a" });
 const lightbox = new Lightbox();
 const animation = new Animation();
+const picture_slider = new PictureSlider();
 // const slide = new Slide();
 const swiper = new Swiper(".swiperCarousel", {
   direction: "horizontal",

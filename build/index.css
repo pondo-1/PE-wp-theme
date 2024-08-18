@@ -1379,88 +1379,103 @@ a:active,
 .image-gallery {
   padding-bottom: 160px;
 }
-@media screen and (min-width: 900px) {
-  .image-gallery .container {
-    display: flex;
-    flex-direction: row;
-    -moz-column-gap: unset;
-         column-gap: unset;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    row-gap: 25px;
-    -moz-column-gap: 25px;
-         column-gap: 25px;
-    position: relative;
-  }
-  .image-gallery .container .caption {
-    display: none;
-  }
-  .image-gallery .container .close {
-    display: none;
-  }
-  .image-gallery .container .single-img {
-    width: 363px;
-    height: 242px;
-    -o-object-fit: none;
-       object-fit: none;
-  }
-  .image-gallery .text_wrapper {
-    padding-top: 15%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
-  .image-gallery .popped {
-    overflow-y: hidden;
-  }
-  .image-gallery .popped .header {
-    display: none;
-  }
-  .image-gallery .popped .lightbox {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9;
-  }
-  .image-gallery .popped .lightbox .caption {
-    display: flex;
-    color: #fff;
-    width: 80vw;
-    max-width: 560px;
-    margin-left: 5vw;
-    font-size: 21px;
-  }
-  .image-gallery .popped .lightbox .close {
-    display: flex;
-    color: #e05976;
-    font-size: 30px;
-    top: 30px;
-    right: 30px;
-    position: fixed;
-  }
-  .image-gallery .popped .lightbox .single-img {
-    width: 80vw;
-    min-width: 320px;
-    max-width: 1920px;
-    height: auto;
-    -o-object-fit: none;
-       object-fit: none;
-  }
+.image-gallery .container {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: unset;
+       column-gap: unset;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  row-gap: 25px;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  position: relative;
 }
-@media screen and (min-width: 900px) and (max-width: 900px) {
+.image-gallery .container .caption {
+  display: none;
+}
+.image-gallery .container .close {
+  display: none;
+}
+.image-gallery .container .single-img {
+  width: 363px;
+  height: 242px;
+  -o-object-fit: none;
+     object-fit: none;
+}
+.image-gallery .text_wrapper {
+  padding-top: 15%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.image-gallery .popped {
+  overflow-y: hidden;
+}
+.image-gallery .popped .header {
+  display: none;
+}
+.image-gallery .popped .lightbox {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+.image-gallery .popped .lightbox .caption {
+  display: flex;
+  color: #fff;
+  width: 80vw;
+  max-width: 560px;
+  margin-left: 5vw;
+  font-size: 21px;
+}
+.image-gallery .popped .lightbox .close {
+  display: flex;
+  color: #e05976;
+  font-size: 30px;
+  top: 30px;
+  right: 30px;
+  position: fixed;
+}
+.image-gallery .popped .lightbox .single-img {
+  width: 80vw;
+  min-width: 320px;
+  max-width: 1920px;
+  height: auto;
+  -o-object-fit: none;
+     object-fit: none;
+}
+@media screen and (max-width: 900px) {
   .image-gallery .container {
     display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
+    flex-wrap: nowrap; /* Verhindert das Umbruch in die nächste Zeile */
+    overflow-x: hidden; /* Verhindert das Anzeigen von Elementen, die nicht auf den Bildschirm passen */
+    gap: 10px; /* Abstand zwischen den Elementen */
+    height: 300px;
   }
-  .image-gallery .container .image-wrapper {
-    display: inline-block;
-    margin-right: 10px;
+  .image-gallery .button {
+    width: 100px;
+    height: 50px;
+  }
+  .image-gallery .gallery {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .image-gallery .image-wrapper {
+    flex: 0 0 300px; /* Stellt sicher, dass jedes Element 300px breit ist */
+    height: 200px; /* Stellt sicher, dass jedes Element 200px hoch ist */
+    margin-right: 10px; /* Abstand zwischen den Bildern */
+  }
+  .image-gallery .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; /* Passt das Bild an die Größe des Containers an */
+  }
+  .image-gallery .caption, .image-gallery .close {
+    display: none;
   }
 }
 

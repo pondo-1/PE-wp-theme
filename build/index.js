@@ -43,6 +43,60 @@ class Lightbox {
 
 /***/ }),
 
+/***/ "./acf-blocks/image-gallery/picture_slider.js":
+/*!****************************************************!*\
+  !*** ./acf-blocks/image-gallery/picture_slider.js ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+class PictureSlider {
+  constructor() {
+    console.log("constructor test");
+    this.currentIndex = 0;
+    this.gallery = document.querySelector('.gallery'); // Korrigiert: Wählen Sie den Galerie-Container aus
+    this.totalImages = this.gallery.children.length;
+    this.initEvents();
+  }
+  initEvents() {
+    document.querySelector('.button.left').addEventListener('click', () => this.moveLeft());
+    document.querySelector('.button.right').addEventListener('click', () => this.moveRight());
+  }
+  moveLeft() {
+    console.log("left");
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+      this.updateGallery();
+    }
+  }
+  moveRight() {
+    console.log("right");
+    if (this.currentIndex < this.totalImages - 1) {
+      this.currentIndex++;
+      this.updateGallery();
+    }
+  }
+  updateGallery() {
+    const offset = -this.currentIndex * 375; // 375 ist die Breite jedes Bildes
+    this.gallery.style.transform = `translateX(${offset}px)`;
+  }
+}
+function initializeSlider() {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    // Beispiel für Tablet-Breite
+    new PictureSlider();
+  }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  initializeSlider();
+  window.addEventListener('resize', initializeSlider); // Überprüfen Sie die Breite bei Größenänderung des Fensters
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (PictureSlider);
+
+/***/ }),
+
 /***/ "./acf-blocks/project-slider/slider.js":
 /*!*********************************************!*\
   !*** ./acf-blocks/project-slider/slider.js ***!
@@ -10632,11 +10686,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acf_blocks_image_gallery_lightbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../acf-blocks/image-gallery/lightbox */ "./acf-blocks/image-gallery/lightbox.js");
 /* harmony import */ var _template_parts_animation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../template-parts/animation */ "./template-parts/animation.js");
 /* harmony import */ var _acf_blocks_project_slider_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../acf-blocks/project-slider/slider */ "./acf-blocks/project-slider/slider.js");
-/* harmony import */ var _node_modules_swiper_swiper_bundle_mjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../node_modules/swiper/swiper-bundle.mjs */ "./node_modules/swiper/swiper-bundle.mjs");
-/* harmony import */ var swiper_css_bundle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/css/bundle */ "./node_modules/swiper/swiper-bundle.css");
-/* harmony import */ var _node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../node_modules/simple-lightbox/dist/simpleLightbox */ "./node_modules/simple-lightbox/dist/simpleLightbox.js");
-/* harmony import */ var _node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _node_modules_simple_lightbox_dist_simpleLightbox_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../node_modules/simple-lightbox/dist/simpleLightbox.css */ "./node_modules/simple-lightbox/dist/simpleLightbox.css");
+/* harmony import */ var _acf_blocks_image_gallery_picture_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../acf-blocks/image-gallery/picture_slider */ "./acf-blocks/image-gallery/picture_slider.js");
+/* harmony import */ var _node_modules_swiper_swiper_bundle_mjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../node_modules/swiper/swiper-bundle.mjs */ "./node_modules/swiper/swiper-bundle.mjs");
+/* harmony import */ var swiper_css_bundle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! swiper/css/bundle */ "./node_modules/swiper/swiper-bundle.css");
+/* harmony import */ var _node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../node_modules/simple-lightbox/dist/simpleLightbox */ "./node_modules/simple-lightbox/dist/simpleLightbox.js");
+/* harmony import */ var _node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _node_modules_simple_lightbox_dist_simpleLightbox_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../node_modules/simple-lightbox/dist/simpleLightbox.css */ "./node_modules/simple-lightbox/dist/simpleLightbox.css");
 
 
 
@@ -10654,13 +10709,14 @@ __webpack_require__.r(__webpack_exports__);
 //Two example function from resp as reference
 // import Navi from "../template-parts/navigation/navigation";
 // import Scrollup from "../template-parts/blog/scrollup";
-var lightbox3 = new (_node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_6___default())({
+var lightbox3 = new (_node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_IMPORTED_MODULE_7___default())({
   elements: ".Simplelightbox a"
 });
 const lightbox = new _acf_blocks_image_gallery_lightbox__WEBPACK_IMPORTED_MODULE_1__["default"]();
 const animation = new _template_parts_animation__WEBPACK_IMPORTED_MODULE_2__["default"]();
+const picture_slider = new _acf_blocks_image_gallery_picture_slider__WEBPACK_IMPORTED_MODULE_4__["default"]();
 // const slide = new Slide();
-const swiper = new _node_modules_swiper_swiper_bundle_mjs__WEBPACK_IMPORTED_MODULE_4__["default"](".swiperCarousel", {
+const swiper = new _node_modules_swiper_swiper_bundle_mjs__WEBPACK_IMPORTED_MODULE_5__["default"](".swiperCarousel", {
   direction: "horizontal",
   loop: true,
   //Amount of slides in loop mode should be at least 2x of slidesPerView value.
