@@ -3,7 +3,7 @@
     "title": "Bildgalerie",
     "description": "Bildgalerie",
     "category": "",
-    "icon": "plus",
+    "icon": "images-alt2",
     "keywords": [""],
     "acf": {
       "renderTemplate": "renderTemplate.php"

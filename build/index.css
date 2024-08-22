@@ -1452,8 +1452,13 @@ a:active,
 }
 @media screen and (max-width: 900px) {
   .image-gallery {
+    padding-bottom: 0px;
     display: flex;
     flex-direction: column;
+  }
+  .image-gallery .gradient-border-shadow::after,
+  .image-gallery .gradient-border-shadow::before {
+    all: unset;
   }
   .image-gallery .container {
     display: flex;
@@ -1468,6 +1473,12 @@ a:active,
     flex-wrap: nowrap;
     display: flex;
     transition: transform 0.5s ease;
+  }
+  .image-gallery .container .gallery-wrapper .single-img {
+    width: 312px;
+    height: 208px;
+    -o-object-fit: none;
+       object-fit: none;
   }
   .image-gallery .container .image-wrapper {
     flex: 0 0 300px;

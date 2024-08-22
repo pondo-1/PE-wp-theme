@@ -87,10 +87,16 @@
   }
 
   @media screen and (max-width: $bp-tablet) {
-
+    padding-bottom: 0px;
     display: flex;
     flex-direction: column;
+    
+    .gradient-border-shadow::after,
+    .gradient-border-shadow::before {
 
+      all: unset
+    
+    }
     .container {
       display: flex;
       flex-wrap: nowrap;
@@ -106,6 +112,11 @@
         flex-wrap: nowrap;
         display: flex;
         transition: transform 0.5s ease;
+        .single-img {
+          width: 312px;
+          height: 208px;
+          object-fit: none;
+        }
 
       }
 

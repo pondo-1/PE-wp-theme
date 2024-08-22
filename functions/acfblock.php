@@ -2,7 +2,6 @@
 class ACFBlock
 {
   public $name;
-
   function __construct($name)
   {
     $this->name = $name;
@@ -14,6 +13,7 @@ class ACFBlock
   function register_acf_blocks()
   {
     register_block_type(THEMEPATH . "/acf-blocks/{$this->name}");
+
   }
 
   function addBlockarray()
