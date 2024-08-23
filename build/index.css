@@ -1410,7 +1410,8 @@ a:active,
   padding-top: 15%;
   position: absolute;
   top: 50%;
-  left: 50%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .image-gallery .popped {
   overflow-y: hidden;
@@ -1470,6 +1471,7 @@ a:active,
     overflow: hidden;
   }
   .image-gallery .container .gallery-wrapper {
+    padding-left: calc((100vw - 312px) / 2 - 5vw);
     flex-wrap: nowrap;
     display: flex;
     transition: transform 0.5s ease;
@@ -1500,14 +1502,20 @@ a:active,
     display: none;
   }
   .image-gallery .text_wrapper {
+    width: 100vw;
     padding-top: 0px;
     position: unset;
     vertical-align: middle;
+    text-align: center;
+    padding-left: 50%;
+    padding-right: 50%;
+    text-align: center;
     display: flex;
     justify-content: center;
-    /* Horizontale Zentrierung */
+    align-items: center;
   }
   .image-gallery .buttons-slider {
+    margin: auto;
     justify-content: space-between;
     align-items: center;
     display: flex;

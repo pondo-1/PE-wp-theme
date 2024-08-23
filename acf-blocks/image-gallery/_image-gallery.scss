@@ -3,13 +3,14 @@
 
   .container {
     .gallery-wrapper {
+      
       @include flex(row, unset);
       justify-content: flex-start;
       flex-wrap: wrap;
       row-gap: 25px;
       column-gap: 25px;
       position: relative;
-
+      
       .caption {
         display: none;
       }
@@ -23,6 +24,7 @@
         height: 242px;
         object-fit: none;
       }
+      
     }
   }
 
@@ -34,7 +36,10 @@
     padding-top: 15%;
     position: absolute;
     top: 50%;
-    left: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+    //left: 50%;
+    
   }
 
 
@@ -98,6 +103,7 @@
     
     }
     .container {
+      
       display: flex;
       flex-wrap: nowrap;
       /* Verhindert das Umbruch in die nächste Zeile */
@@ -109,6 +115,9 @@
 
 
       .gallery-wrapper {
+        $image-width: 312px;
+        $padding-left: 5vw;
+        padding-left: calc((100vw - #{$image-width}) / 2 - #{$padding-left});
         flex-wrap: nowrap;
         display: flex;
         transition: transform 0.5s ease;
@@ -144,15 +153,21 @@
     }
 
     .text_wrapper {
+      width: 100vw;
       padding-top: 0px;
       position: unset;
       vertical-align: middle;
+      text-align: center;
+      padding-left: 50%;
+      padding-right: 50%;
+      text-align: center;
       display: flex;
       justify-content: center;
-      /* Horizontale Zentrierung */
+      align-items: center;
     }
 
     .buttons-slider {
+      margin: auto;
       justify-content: space-between;
       align-items: center;
       display: flex;
