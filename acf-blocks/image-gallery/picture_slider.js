@@ -55,7 +55,9 @@ class PictureSlider {
     }
 
     updateGallery() {
-        const offset = -this.currentIndex * 337; // 337 ist die Breite jedes Bildes
+        console.log("Window " + window.innerWidth)
+        console.log(window.outerWidth)
+        const offset = -this.currentIndex * 322; 
         this.gallery.style.transform = `translateX(${offset}px)`;
     }
 

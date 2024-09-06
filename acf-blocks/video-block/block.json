@@ -1,0 +1,16 @@
+{
+    "name": "acf/video-block",
+    "title": "Video & Text",
+    "description": "Video block for youtube",
+    "category": "",
+    "icon": "format-video",
+    "keywords": ["text", "features"],
+    "acf": {
+      "mode": "edit",
+      "renderTemplate": "renderTemplate.php"
+    },
+    "supports": {
+      "align": [""],
+      "customClassName": false
+    }
+  }

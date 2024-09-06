@@ -32,3 +32,4 @@ new ACFblock("bg-image-hero");
 new ACFblock("one-column");
 new ACFblock("image-gallery");
 new ACFblock("contactform");
+new ACFBlock("video-block");
