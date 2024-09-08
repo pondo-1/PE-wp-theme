@@ -53,7 +53,6 @@ class Lightbox {
 __webpack_require__.r(__webpack_exports__);
 class PictureSlider {
   constructor(galleryWrapper) {
-    console.log("constructor test");
     this.currentIndex = 0;
     this.gallery = galleryWrapper; // Galerie-Container wird als Parameter übergeben
     this.totalImages = this.gallery.children.length;
@@ -69,7 +68,6 @@ class PictureSlider {
   }
 
   moveLeft() {
-    console.log("left");
     if (this.currentIndex > 0) {
       this.currentIndex--;
       this.updateGallery();
@@ -81,7 +79,6 @@ class PictureSlider {
     }
   }
   moveRight() {
-    console.log("right");
     if (this.currentIndex < this.totalImages - 1) {
       this.currentIndex++;
       this.updateGallery();
@@ -105,8 +102,6 @@ class PictureSlider {
     }
   }
   updateGallery() {
-    console.log("Window " + window.innerWidth);
-    console.log(window.outerWidth);
     const offset = -this.currentIndex * 322;
     this.gallery.style.transform = `translateX(${offset}px)`;
   }
@@ -119,7 +114,6 @@ class PictureSlider {
     this.currentIndex = 0;
     this.updateGallery();
     this.changeCircleColor(0);
-    console.log("Gallery reset due to screen width > 900px");
   }
 }
 function initializeSliders() {

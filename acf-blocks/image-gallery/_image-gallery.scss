@@ -1,16 +1,21 @@
 .image-gallery {
   padding-bottom: 160px;
-
+  .headline-wrapper {
+    padding-bottom: 50px;
+      padding-left: 190px;
+      padding-right: 190px;
+      font-family: "Barlow Semi Condensed";
+      
+  }
   .container {
     .gallery-wrapper {
-      
       @include flex(row, unset);
       justify-content: flex-start;
       flex-wrap: wrap;
       row-gap: 25px;
       column-gap: 25px;
       position: relative;
-      
+
       .caption {
         display: none;
       }
@@ -19,25 +24,25 @@
         display: none;
       }
 
-      
       .single-img {
-        width: 312px;
+        width: 363px;
         height: 242px;
         object-fit: none;
         position: relative;
         z-index: 2;
-        
       }
+
       .single-img:hover {
         opacity: 0.75;
         cursor: pointer;
       }
+
       div {
         width: 363px;
         height: 242px;
-        background-color: white; /* Hintergrundfarbe beim Hover */
-    }
-      
+        background-color: white;
+        /* Hintergrundfarbe beim Hover */
+      }
     }
   }
 
@@ -46,16 +51,15 @@
   }
 
   .text_wrapper {
-    width: 100vw;
-    padding-top: 15%;
-    position: absolute;
-    top: 50%;
-    padding-left: 10%;
-    padding-right: 10%;
-    //left: 50%;
-    
+    position: unset;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-left: 36%;
+    padding-right: 36%;
   }
-
 
   //when lightbox active
   .popped {
@@ -99,9 +103,7 @@
         max-width: 1920px;
         height: auto;
         object-fit: none;
-
       }
-
     }
   }
 
@@ -109,24 +111,26 @@
     padding-bottom: 0px;
     display: flex;
     flex-direction: column;
-    
+
     .gradient-border-shadow::after,
     .gradient-border-shadow::before {
-
-      all: unset
-    
+      all: unset;
+    }
+    .headline-wrapper {
+      padding-bottom: 50px;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-family: "Barlow Semi Condensed";
+        
     }
     .container {
-      
       display: flex;
       flex-wrap: nowrap;
       /* Verhindert das Umbruch in die nächste Zeile */
       gap: 10px;
       /* Abstand zwischen den Elementen */
-      height: 300px;
+      // height: 300px;
       overflow: hidden;
-
-
 
       .gallery-wrapper {
         $image-width: 312px;
@@ -137,18 +141,18 @@
         column-gap: 10px;
         display: flex;
         transition: transform 0.5s ease;
+
         div {
           width: 312px;
           height: 208px;
         }
+
         .single-img {
           width: 312px;
           height: 208px;
           object-fit: none;
         }
-
       }
-
 
       .image-wrapper {
         flex: 0 0 300px;
@@ -173,13 +177,14 @@
     }
 
     .text_wrapper {
-      
       padding-top: 0px;
       position: unset;
       text-align: left;
       display: flex;
-      justify-content: left;
+      justify-content: center;
       align-items: center;
+      padding-left: 5%;
+      padding-right: 5%;
     }
 
     .buttons-slider {
@@ -194,21 +199,20 @@
         display: inline-block;
         background-color: transparent;
         /* Beispielhintergrundfarbe */
-        color: #3C3C3C;
+        color: #3c3c3c;
         /* Beispieltextfarbe */
         border: none;
         padding: 10px 20px;
         cursor: pointer;
         border-radius: 5px;
-
       }
 
       .image-circle-gallery {
-        
         order: 2;
         display: flex;
         justify-content: center;
-        gap: 10px; 
+        gap: 10px;
+
         .collected-image-circle {
           width: 10px;
           /* Durchmesser des Kreises */
@@ -228,8 +232,6 @@
       .button-slider.right {
         order: 3;
       }
-
     }
   }
-
 }

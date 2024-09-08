@@ -3,6 +3,26 @@
     "title": "module: Image Gallery",
     "fields": [
         {
+            "key": "field_66dd9de96b8ef",
+            "label": "Image Gallery Headline",
+            "name": "image_gallery_headline",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_650d97e0f40f5",
             "label": "Image Gallery",
             "name": "image_gallery",
@@ -69,5 +89,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723302120
+    "modified": 1725800296
 }
