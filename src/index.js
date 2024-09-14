@@ -19,7 +19,6 @@ import "../node_modules/simple-lightbox/dist/simpleLightbox.css"; // style
 var lightbox3 = new SimpleLightbox({ elements: ".Simplelightbox a" });
 const lightbox = new Lightbox();
 const animation = new Animation();
-const picture_slider = new PictureSlider();
 // const slide = new Slide();
 const swiper = new Swiper(".swiperCarousel", {
   direction: "horizontal",
@@ -39,11 +38,11 @@ const swiper = new Swiper(".swiperCarousel", {
       spaceBetweenSlides: 24,
     },
   },
-
+  
   keyboard: {
     enabled: true,
   },
-
+  
   pagination: {
     el: ".swiper-pagination",
   },
@@ -54,3 +53,8 @@ const swiper = new Swiper(".swiperCarousel", {
 });
 //const navigation = new Navi();
 //const scrollup = new Scrollup();
+document.querySelectorAll('.gallery-wrapper').forEach(galleryWrapper => {
+  if(galleryWrapper) {
+    const picture_slider = new PictureSlider(galleryWrapper);
+}});
+// const picture_slider = new PictureSlider();

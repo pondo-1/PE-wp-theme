@@ -2,19 +2,19 @@ class PictureSlider {
     constructor(galleryWrapper) {
         this.currentIndex = 0;
         this.gallery = galleryWrapper; // Galerie-Container wird als Parameter übergeben
-        this.totalImages = this.gallery.children.length;
         this.initEvents();
         this.changeCircleColor(0);
         this.checkScreenWidth(); // Überprüfen Sie die Bildschirmbreite beim Initialisieren
     }
-
+    
     initEvents() {
+        window.addEventListener('resize', () => this.checkScreenWidth()); // Überprüfen Sie die Bildschirmbreite bei Größenänderung des Fensters
         this.gallery.closest('.module').querySelector('.button-slider.left').addEventListener('click', () => this.moveLeft());
         this.gallery.closest('.module').querySelector('.button-slider.right').addEventListener('click', () => this.moveRight());
-        window.addEventListener('resize', () => this.checkScreenWidth()); // Überprüfen Sie die Bildschirmbreite bei Größenänderung des Fensters
     }
-
+    
     moveLeft() {
+        
         if (this.currentIndex > 0) {
             this.currentIndex--;
             this.updateGallery();
@@ -59,6 +59,8 @@ class PictureSlider {
     checkScreenWidth() {
         if (window.innerWidth > 900) {
             this.resetGallery();
+        } else {
+            this.totalImages = this.gallery.children.length
         }
     }
 
@@ -71,8 +73,10 @@ class PictureSlider {
 
 function initializeSliders() {
     document.querySelectorAll('.gallery-wrapper').forEach(galleryWrapper => {
-        new PictureSlider(galleryWrapper);
-    });
+        if(galleryWrapper) {
+            new PictureSlider(galleryWrapper);
+}});
+    
 }
 
 document.addEventListener('DOMContentLoaded', () => {

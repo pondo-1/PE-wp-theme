@@ -55,18 +55,16 @@ class PictureSlider {
   constructor(galleryWrapper) {
     this.currentIndex = 0;
     this.gallery = galleryWrapper; // Galerie-Container wird als Parameter übergeben
-    this.totalImages = this.gallery.children.length;
     this.initEvents();
     this.changeCircleColor(0);
     this.checkScreenWidth(); // Überprüfen Sie die Bildschirmbreite beim Initialisieren
   }
 
   initEvents() {
+    window.addEventListener('resize', () => this.checkScreenWidth()); // Überprüfen Sie die Bildschirmbreite bei Größenänderung des Fensters
     this.gallery.closest('.module').querySelector('.button-slider.left').addEventListener('click', () => this.moveLeft());
     this.gallery.closest('.module').querySelector('.button-slider.right').addEventListener('click', () => this.moveRight());
-    window.addEventListener('resize', () => this.checkScreenWidth()); // Überprüfen Sie die Bildschirmbreite bei Größenänderung des Fensters
   }
-
   moveLeft() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
@@ -108,6 +106,8 @@ class PictureSlider {
   checkScreenWidth() {
     if (window.innerWidth > 900) {
       this.resetGallery();
+    } else {
+      this.totalImages = this.gallery.children.length;
     }
   }
   resetGallery() {
@@ -118,7 +118,9 @@ class PictureSlider {
 }
 function initializeSliders() {
   document.querySelectorAll('.gallery-wrapper').forEach(galleryWrapper => {
-    new PictureSlider(galleryWrapper);
+    if (galleryWrapper) {
+      new PictureSlider(galleryWrapper);
+    }
   });
 }
 document.addEventListener('DOMContentLoaded', () => {
@@ -10745,7 +10747,6 @@ var lightbox3 = new (_node_modules_simple_lightbox_dist_simpleLightbox__WEBPACK_
 });
 const lightbox = new _acf_blocks_image_gallery_lightbox__WEBPACK_IMPORTED_MODULE_1__["default"]();
 const animation = new _template_parts_animation__WEBPACK_IMPORTED_MODULE_2__["default"]();
-const picture_slider = new _acf_blocks_image_gallery_picture_slider__WEBPACK_IMPORTED_MODULE_4__["default"]();
 // const slide = new Slide();
 const swiper = new _node_modules_swiper_swiper_bundle_mjs__WEBPACK_IMPORTED_MODULE_5__["default"](".swiperCarousel", {
   direction: "horizontal",
@@ -10779,6 +10780,12 @@ const swiper = new _node_modules_swiper_swiper_bundle_mjs__WEBPACK_IMPORTED_MODU
 });
 //const navigation = new Navi();
 //const scrollup = new Scrollup();
+document.querySelectorAll('.gallery-wrapper').forEach(galleryWrapper => {
+  if (galleryWrapper) {
+    const picture_slider = new _acf_blocks_image_gallery_picture_slider__WEBPACK_IMPORTED_MODULE_4__["default"](galleryWrapper);
+  }
+});
+// const picture_slider = new PictureSlider();
 }();
 /******/ })()
 ;

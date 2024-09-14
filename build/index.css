@@ -1355,6 +1355,7 @@ a:active,
   }
   .bg_image_hero .container .content-wrapper .textbox-editor .module__heading {
     font-size: 30px;
+    line-height: 38px;
     font-family: "Barlow Semi Condensed";
   }
 }

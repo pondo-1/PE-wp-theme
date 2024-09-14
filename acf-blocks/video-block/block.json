@@ -4,7 +4,7 @@
     "description": "Video block for youtube",
     "category": "",
     "icon": "format-video",
-    "keywords": ["text", "features"],
+    "keywords": ["youtube", "video"],
     "acf": {
       "mode": "edit",
       "renderTemplate": "renderTemplate.php"

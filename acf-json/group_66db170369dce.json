@@ -3,6 +3,24 @@
     "title": "module: video-block",
     "fields": [
         {
+            "key": "field_66e5b33aafd30",
+            "label": "Block name",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h4>Video block<\/h4>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_66db1703d0b2b",
             "label": "headline",
             "name": "headline",
@@ -78,5 +96,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1725716378
+    "modified": 1726329825
 }

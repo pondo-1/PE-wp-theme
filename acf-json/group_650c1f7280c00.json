@@ -3,6 +3,24 @@
     "title": "module: One Column",
     "fields": [
         {
+            "key": "field_66e5b39b1a122",
+            "label": "Block name",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h4>One Column<\/h4>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_650d8bf5456a8",
             "label": "Textausrichtung",
             "name": "align",
@@ -67,5 +85,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1695387091
+    "modified": 1726329788
 }

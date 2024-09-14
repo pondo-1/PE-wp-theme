@@ -3,6 +3,24 @@
     "title": "module: Image Gallery",
     "fields": [
         {
+            "key": "field_66e5b104559bb",
+            "label": "Block name",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h4>Image Gallery<\/h4>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_66dd9de96b8ef",
             "label": "Image Gallery Headline",
             "name": "image_gallery_headline",
@@ -89,5 +107,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1725800296
+    "modified": 1726329143
 }
