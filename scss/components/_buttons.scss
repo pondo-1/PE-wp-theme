@@ -1,4 +1,4 @@
-.btn {
+@mixin btn {
   position: relative;
   text-decoration: none;
   font-weight: 600;
@@ -8,67 +8,53 @@
   margin: 2px;
   cursor: pointer;
   border-radius: 15px;
+  border: none;
 
-  &--empty {
-    //  background-color: $c-bg-basic;
-    //  @include gradient-border-btn($c-bg-basic);
+  &:hover {
+    opacity: unset;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+  }
+  &::before {
+    background: linear-gradient(200deg, $c-f-red, $sec-violett);
+    z-index: -1;
+    padding: 3px;
+    top: -3px;
+    left: -3px;
+    box-sizing: content-box;
+    border-radius: 15px;
+  }
+  &::after {
+    background-color: $c-bg-basic;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+    transform: scale(1);
+    transform-origin: 50%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  &:hover::after,
+  &:active::after {
+    z-index: -1;
+    transform: scale(95%, 80%);
+    border-radius: 12px;
+  }
+  &:active {
+    box-shadow: 0 0 10px #000;
   }
 }
-
-.main .btn:hover,
-.main .btn:active {
-  opacity: 1;
+.btn {
+  @include btn;
 }
 
-.btn::before,
-.btn::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-}
-
-.btn::before {
-  background: linear-gradient(200deg, $c-f-red, $sec-violett);
-  z-index: -2;
-  padding: 3px;
-  top: -3px;
-  left: -3px;
-  box-sizing: content-box;
-  border-radius: 15px;
-}
-
-.btn::before {
-  z-index: -1;
-}
-
-.btn::after {
-  background-color: $c-bg-basic;
-  z-index: -1;
-  //transform: scale(0.93,-0.8);
-  //border: 5px solid rgba(0,0,0,0.5);
-  top: 0;
-  left: 0;
-  border-radius: 12px;
-  transform: scale(1);
-  transform-origin: 50%;
-  transition-property: transform;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-}
-
-.bg-black .btn::after {
+.btn .bg-black .btn::after {
   background-color: $c-bg-black;
-}
-
-.btn:hover::after,
-.btn:active::after {
-  // background-color: transparent;
-  z-index: -1;
-  transform: scale(95%, 80%);
-  border-radius: 12px;
-}
-
-.btn:active {
-  box-shadow: 0 0 10px #000;
 }

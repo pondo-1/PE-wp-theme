@@ -9,18 +9,25 @@
 
     .contactform-wrapper {
       margin-left: 40px;
-      background-color: #fff;
       padding: 25px 86px;
       font-family: $ff-barlow-semi-condensed;
       font-weight: 600;
-
+      position: relative;
       .gfield {
         @include flex(column, unset);
         // padding-bottom: 25px;
       }
 
-      .column-3-2 {
-        height: 750px;
+      &.column-3-2::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -10;
       }
       .textarea {
         height: 180px;
@@ -33,6 +40,11 @@
         input,
         textarea {
           border: none;
+
+          box-shadow: none;
+          -moz-box-shadow: none;
+          -webkit-box-shadow: none;
+
           font-size: 21px;
           line-height: 1.8em;
           width: 100%;
@@ -55,7 +67,7 @@
           font-size: 18px;
         }
       }
-      
+
       .gfield_label {
         order: 2;
         padding-top: 5px;
@@ -63,9 +75,9 @@
         position: relative;
         padding-bottom: 10px;
         font-size: 21px;
-        font-family: 'Barlow Semi Condensed';
+        font-family: "Barlow Semi Condensed";
         //    @include gradient-border-feature;
-      
+
         &::before {
           height: 1px;
         }
@@ -76,10 +88,9 @@
           top: 0;
           width: 100%;
           height: 2px;
-          background: linear-gradient(45deg, #E05976, #9A60C2);
+          background: linear-gradient(45deg, #e05976, #9a60c2);
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Schatten hinzufügen */
         }
-        
       }
 
       .gform_footer {
@@ -89,41 +100,19 @@
         &::before {
           z-index: 0;
         }
+        #gform_submit_button_1 {
+          background: transparent;
+        }
 
         .btn--empty {
           height: 100%;
           font-size: 21px;
           font-weight: 600;
         }
+        .button::before {
+          content: "";
+        }
       }
-      .gform_button {
-        
-        //  width: 319px;
-        // height: 55px;
-        // background:none;
-        // border-radius: 15px; /*1*/
-        // margin-top: 50px;
-        // margin-bottom: 50px;
-        // padding: 14px;
-        // font-size: 21px;
-        // font-family: 'Barlow';
-        // border: 2px solid transparent; /*2*/
-        // border-image: linear-gradient(45deg, #E05976, #9A60C2) 1; /*3*/
-        // color: #3C3C3C; /* Textfarbe hinzufügen */
-        // font-size: 16px; /* Schriftgröße anpassen */
-        // text-align: center; /* Text zentrieren */
-        // line-height: 27px; /* Zeilenhöhe anpassen */
-        // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Schatten hinzufügen */
-        // cursor: pointer;
-        
-    }
-
-    
-    
-    
-    
-    
-      
     }
   }
 
@@ -131,7 +120,7 @@
     .container {
       padding: 0px;
       @include flex(column, $row-gap--small);
-      
+
       .image-wrapper {
         order: 1;
         max-width: 380px;
@@ -144,30 +133,27 @@
       .contactform-wrapper {
         padding: 20px;
       }
-      
+
       .column-3-1 {
-          padding: 20px;
-          width: 100%;
-          h2 {
-            margin-bottom: 20px;
-            font-family: 'Barlow Semi Condensed';
+        padding: 20px;
+        width: 100%;
+        h2 {
+          margin-bottom: 20px;
+          font-family: "Barlow Semi Condensed";
           font-size: 30px;
-          }
-          p {
-          font-family: 'Barlow'; 
+        }
+        p {
+          font-family: "Barlow";
           font-size: 17px;
           line-height: 1.8em;
-          }
-
-
-          }
-          .column-3-2 {
-            text-align: left;
-            font-size: 21px;
-            width: 100%;
-            margin: 0px;
-            }
-          
+        }
+      }
+      .column-3-2 {
+        text-align: left;
+        font-size: 21px;
+        width: 100%;
+        margin: 0px;
+      }
     }
   }
 }
