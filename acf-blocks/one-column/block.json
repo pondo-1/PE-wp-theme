@@ -1,14 +1,15 @@
 {
-    "name": "acf/one-column",
-    "title": "Eine Spalte",
-    "description": "Eine Spalte für Text und Bilder, links, zentiert",
-    "category": "",
-    "icon": "plus",
-    "keywords": [""],
-    "acf": {
-      "renderTemplate": "renderTemplate.php"
-    },
-    "supports": {
-      "align": [""]
-    }
+  "name": "acf/one-column",
+  "title": "Eine Spalte",
+  "description": "Eine Spalte für Text und Bilder, links, zentiert",
+  "category": "",
+  "icon": "plus",
+  "keywords": [""],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "renderTemplate.php"
+  },
+  "supports": {
+    "align": [""]
   }
+}

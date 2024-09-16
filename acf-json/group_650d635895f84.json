@@ -63,11 +63,11 @@
             "prefix_name": 0
         },
         {
-            "key": "field_650d63d26609b",
-            "label": "Contact",
-            "name": "contact",
+            "key": "field_66e85719ebc6a",
+            "label": "Quote under Contact",
+            "name": "contact-quote",
             "aria-label": "",
-            "type": "group",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -76,29 +76,11 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_650d63f2678a0",
-                    "label": "quote",
-                    "name": "quote",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                }
-            ]
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -119,5 +101,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1696101590
+    "modified": 1726502828
 }
