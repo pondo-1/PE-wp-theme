@@ -1,5 +1,8 @@
 <section class="module bg_image_hero" style="background-image:url(
-  <?php the_post_thumbnail_url(); ?>
+  <?php $backgroundimage = get_field('backgroundimage'); ?>
+  <?php if ($backgroundimage): ?>
+  <?php echo esc_url($backgroundimage['url']); ?>" alt="<?php echo esc_attr($backgroundimage['alt']); ?>
+  <?php endif; ?>
 )">
   <div class="container">
     <div class="content-wrapper text-box">
@@ -20,7 +23,8 @@
     </div>
     <div class="contact">
       <div class="image-wrapper contact-img-bg">
-        <img src="<?php echo get_template_directory_uri(); ?>/asset/img/default-Profil.png" alt="real" sizes="(max-width: 500px) 100vw, 500px">
+        <img src="<?php echo get_template_directory_uri(); ?>/asset/img/default-Profil.png" alt="real"
+          sizes="(max-width: 500px) 100vw, 500px">
       </div>
       <div class="text_wrapper">
         <q class="quote">
