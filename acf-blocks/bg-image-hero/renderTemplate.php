@@ -4,6 +4,9 @@
   <?php echo esc_url($backgroundimage['url']); ?>" alt="<?php echo esc_attr($backgroundimage['alt']); ?>
   <?php endif; ?>
 )">
+  
+  
+  </div>
   <div class="container">
     <div class="content-wrapper text-box">
       <div class="textbox-editor">
@@ -28,7 +31,12 @@
       </div>
       <div class="text_wrapper">
         <q class="quote">
-          <?php the_field('contact-quote'); ?>
+          <?php if (have_rows('contact')): ?>
+            <?php while (have_rows('contact')):
+              the_row(); ?>
+              <?php the_sub_field('quote'); ?>
+            <?php endwhile; ?>
+          <?php endif; ?>
         </q>
         <div class="position_and_name">
           <span>Inhaber: </span>Thomas Pondelek
