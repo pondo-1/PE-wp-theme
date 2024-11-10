@@ -123,6 +123,14 @@
   .hamburger__checkbox:checked ~ .header__logo-box {
     filter: invert(100);
   }
+  @media screen and (max-width: $bp-tablet) {
+    .navigation .header-main-navi .main-menu .main-menu-link {
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      line-height: 30px; /* Line-height für Zeilenumbrüche */
+    } 
+  
+  }
 }
 
 // Black Background/Artikel
