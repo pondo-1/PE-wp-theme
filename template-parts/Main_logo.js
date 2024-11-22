@@ -3,7 +3,6 @@ class MainLogo {
         this.navWrapper = document.querySelector('.header .navigation .nav_wrapper');
         this.logoBox = document.querySelector('.header__logo-box img');
         this.initResizeObserver();
-        console.log("constructor");
     }
 
     initResizeObserver() {
@@ -18,12 +17,10 @@ class MainLogo {
             const navWrapperWidth = this.navWrapper.offsetWidth;
             const screenWidth = window.innerWidth;
             console.log(navWrapperWidth)
-            if ((screenWidth - navWrapperWidth) < (150 + screenWidth * 0.05) && navWrapperWidth > 0) {
+            if ((screenWidth - navWrapperWidth) < 150  && navWrapperWidth > 0) {
                 this.logoBox.classList.add('rotate-image');
-                console.log("rotate");
             } else {
                 this.logoBox.classList.remove('rotate-image');
-                console.log("rotate");
             }
         }
     }
