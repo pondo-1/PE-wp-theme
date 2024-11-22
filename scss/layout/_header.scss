@@ -92,8 +92,7 @@
           }
 
           .sub-menu {
-          .menu-item-depth-1 {
-            
+            .menu-item-depth-1 {
               list-style-type: none;
 
               &::marker {
@@ -124,11 +123,23 @@
     filter: invert(100);
   }
   @media screen and (max-width: $bp-tablet) {
-    .navigation .header-main-navi .main-menu .main-menu-link {
-      margin-bottom: 14px;
-      padding-bottom: 14px;
-      line-height: 30px; /* Line-height für Zeilenumbrüche */
-    } 
+    .navigation {
+      .header-main-navi .main-menu .main-menu-link {
+        margin-bottom: 14px;
+        padding-bottom: 14px;
+        line-height: 30px; /* Line-height für Zeilenumbrüche */
+      }
+      .nav_wrapper {
+        width: 80%;
+      }
+    }
+    .rotate-image {
+      transform-origin: top left;
+      transform: rotate(90deg);
+      position: absolute;
+      top: 0px;
+      left: 20px;
+  }
   
   }
 }
