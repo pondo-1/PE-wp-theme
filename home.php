@@ -331,7 +331,7 @@
       <div class="company-name info__heading">Page Effekt e. K.</div>
       <div class="company-detail info__content">
         <p class="owner">Inhaber: Thomas Pondelek</p>
-        <p class="email">info@page-effekt.de</p>
+        <p class="email">info@page-effect.com</p>
         <p class="address">Kleinwernfeld 8, 97737 Gemünden, Deutschland</p>
         <p class="register-number">
           Handelsregister: Amstgericht Würzburg HRA 7868
